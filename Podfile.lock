@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.8.0)
+  - AlamofireImage (4.3.0):
+    - Alamofire (~> 5.8)
+  - Cosmos (23.0.0)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - AlamofireImage (~> 4.1)
+  - Cosmos (~> 23.0)
+  - SnapKit (~> 5.6.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - Cosmos
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
+  AlamofireImage: 843953fa97bee5f561cf05d83abd759e590b068d
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: b4a68cbb0d57168e5c79743c5174f3ab3b5e4169
+
+COCOAPODS: 1.12.1
