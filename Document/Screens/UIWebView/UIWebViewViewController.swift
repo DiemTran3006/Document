@@ -18,6 +18,7 @@ class UIWebViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.stopAnimating()
         title = Menu.UIWebView.title
         hideKeyboardWhenTappedAround()
     }
@@ -58,13 +59,6 @@ class UIWebViewViewController: UIViewController {
             
             if link.hasPrefix("http://") || link.hasPrefix("https://") {
                 let urlRequest = URLRequest(url: url)
-                webView.load(urlRequest)
-                History.append(link)
-                webView.navigationDelegate = self
-            } else if link.hasPrefix("http://") || link.hasPrefix("https://") {
-                link = "http://\(link)"
-                let url2 = URL(string: link)!
-                let urlRequest = URLRequest(url: url2)
                 webView.load(urlRequest)
                 History.append(link)
                 webView.navigationDelegate = self

@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         
+        // Config google
+        let clientID = FirebaseApp.app()?.options.clientID
+        let config = GIDConfiguration(clientID: clientID ?? "")
+        GIDSignIn.sharedInstance.configuration = config
+        
         return true
     }
     

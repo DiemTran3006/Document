@@ -6,38 +6,66 @@
 //
 
 import UIKit
+import FirebaseAuth
 import FirebaseCore
 import GoogleSignIn
+import FBSDKCoreKit
 import FBSDKLoginKit
+import AlamofireImage
 
 class LoginSocialViewController: UIViewController {
-      
-    @IBOutlet weak var signInFacebook: FBLoginButton!
+    
+    @IBOutlet weak var avatarView: UIImageView!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUser(name: "", email: "", avatarUrl: "")
+    }
+    
+    private func setUser(name: String,
+                         email: String,
+                         avatarUrl: String) {
+        nameLabel.text = name
+        emailLabel.text = email
+        if let url = URL(string: avatarUrl) {
+            avatarView.af.setImage(withURL: url)
+        }
+    }
+    
+    @IBAction func loginFacebookAction(_ sender: Any) {
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: ["public_profile"],
+                           from: self) { result, error in
+
+        }
     }
     
     @IBAction func loginGoogleAction(_ sender: Any) {
-        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
-        let config = GIDConfiguration(clientID: clientID)
-        GIDSignIn.sharedInstance.configuration = config
-
-        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
-            guard error == nil else {
-                print("Error: ---\(error)")
-                return
-            }
-
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [weak self] result, error in
             guard let user = result?.user,
+                  error == nil,
+                  let self = self,
                   let idToken = user.idToken?.tokenString else {
                 return
             }
-            print(idToken)
-
-//            let credential = GoogleAuthProvider.credential(withIDToken: idToken,
-//                                                           accessToken: user.accessToken.tokenString)
-
+            
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                           accessToken: user.accessToken.tokenString)
+            
+            Auth.auth().signIn(with: credential) { result, error in
+                guard error == nil else {
+                    return
+                }
+                
+                let displayName = result?.user.displayName ?? ""
+                let email = result?.user.email ?? ""
+                let photoURL = result?.user.photoURL?.absoluteString ?? ""
+                
+                self.setUser(name: displayName, email: email, avatarUrl: photoURL)
+            }
+            
         }
     }
 }
