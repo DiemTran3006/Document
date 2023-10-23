@@ -56,6 +56,11 @@
 		6F00282A2AE0354B0071EB5D /* UIDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F0028282AE0354B0071EB5D /* UIDatePickerViewController.xib */; };
 		6F00282E2AE0C8630071EB5D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F00282C2AE0C8630071EB5D /* CollectionViewCell.swift */; };
 		6F00282F2AE0C8630071EB5D /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F00282D2AE0C8630071EB5D /* CollectionViewCell.xib */; };
+		6F0028752AE272300071EB5D /* UIWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0028732AE272300071EB5D /* UIWebViewViewController.swift */; };
+		6F0028762AE272300071EB5D /* UIWebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F0028742AE272300071EB5D /* UIWebViewViewController.xib */; };
+		6FC0811E2AE4E649008AF804 /* LoginSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC0811C2AE4E649008AF804 /* LoginSocialViewController.swift */; };
+		6FC0811F2AE4E649008AF804 /* LoginSocialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC0811D2AE4E649008AF804 /* LoginSocialViewController.xib */; };
+		6FC081262AE64744008AF804 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FC081252AE64744008AF804 /* GoogleService-Info.plist */; };
 		BF20DBA562C30531C87B5D3E /* Pods_Document.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47E11B96A0B5AF6B0160F18 /* Pods_Document.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +118,12 @@
 		6F0028282AE0354B0071EB5D /* UIDatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIDatePickerViewController.xib; sourceTree = "<group>"; };
 		6F00282C2AE0C8630071EB5D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		6F00282D2AE0C8630071EB5D /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		6F0028732AE272300071EB5D /* UIWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWebViewViewController.swift; sourceTree = "<group>"; };
+		6F0028742AE272300071EB5D /* UIWebViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIWebViewViewController.xib; sourceTree = "<group>"; };
+		6FC0811C2AE4E649008AF804 /* LoginSocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSocialViewController.swift; sourceTree = "<group>"; };
+		6FC0811D2AE4E649008AF804 /* LoginSocialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginSocialViewController.xib; sourceTree = "<group>"; };
+		6FC081252AE64744008AF804 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6FC081272AE6736A008AF804 /* Document.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Document.entitlements; sourceTree = "<group>"; };
 		B47E11B96A0B5AF6B0160F18 /* Pods_Document.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Document.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -149,6 +160,7 @@
 		6F0027A62AE013470071EB5D /* Document */ = {
 			isa = PBXGroup;
 			children = (
+				6FC081272AE6736A008AF804 /* Document.entitlements */,
 				6F0027EF2AE014340071EB5D /* Screens */,
 				6F0027D22AE014200071EB5D /* Extensions */,
 				6F0027C92AE013C90071EB5D /* Common */,
@@ -158,6 +170,7 @@
 				6F0027B32AE013480071EB5D /* Assets.xcassets */,
 				6F0027B52AE013480071EB5D /* LaunchScreen.storyboard */,
 				6F0027B82AE013480071EB5D /* Info.plist */,
+				6FC081252AE64744008AF804 /* GoogleService-Info.plist */,
 				6F0027B02AE013470071EB5D /* Document.xcdatamodeld */,
 			);
 			path = Document;
@@ -225,6 +238,8 @@
 		6F0027EF2AE014340071EB5D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				6FC0811B2AE4E62D008AF804 /* LoginSocial */,
+				6F0028722AE272090071EB5D /* UIWebView */,
 				6F0028222AE0350F0071EB5D /* UIDatePicker */,
 				6F0028212AE034EA0071EB5D /* UITimePicker */,
 				6F00281C2AE033400071EB5D /* UIAlertController */,
@@ -347,6 +362,24 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		6F0028722AE272090071EB5D /* UIWebView */ = {
+			isa = PBXGroup;
+			children = (
+				6F0028732AE272300071EB5D /* UIWebViewViewController.swift */,
+				6F0028742AE272300071EB5D /* UIWebViewViewController.xib */,
+			);
+			path = UIWebView;
+			sourceTree = "<group>";
+		};
+		6FC0811B2AE4E62D008AF804 /* LoginSocial */ = {
+			isa = PBXGroup;
+			children = (
+				6FC0811C2AE4E649008AF804 /* LoginSocialViewController.swift */,
+				6FC0811D2AE4E649008AF804 /* LoginSocialViewController.xib */,
+			);
+			path = LoginSocial;
+			sourceTree = "<group>";
+		};
 		8112C26914FC4F00CCD655D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,8 +468,11 @@
 				6F0028262AE035350071EB5D /* UITimePickerViewController.xib in Resources */,
 				6F0028112AE01F250071EB5D /* PushViewController.xib in Resources */,
 				6F0028202AE0336B0071EB5D /* UIAlertViewController.xib in Resources */,
+				6FC0811F2AE4E649008AF804 /* LoginSocialViewController.xib in Resources */,
 				6F0027FF2AE019380071EB5D /* TableViewController.xib in Resources */,
 				6F0027F42AE014530071EB5D /* HomeViewController.xib in Resources */,
+				6F0028762AE272300071EB5D /* UIWebViewViewController.xib in Resources */,
+				6FC081262AE64744008AF804 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +536,7 @@
 				6F0027E62AE0142A0071EB5D /* UITextView+Extension.swift in Sources */,
 				6F0027CE2AE014020071EB5D /* LoadingView.swift in Sources */,
 				6F0028102AE01F250071EB5D /* PushViewController.swift in Sources */,
+				6FC0811E2AE4E649008AF804 /* LoginSocialViewController.swift in Sources */,
 				6F0027E42AE0142A0071EB5D /* UITextField+Extension.swift in Sources */,
 				6F0027B22AE013470071EB5D /* Document.xcdatamodeld in Sources */,
 				6F0027ED2AE0142A0071EB5D /* Int+Extension.swift in Sources */,
@@ -514,6 +551,7 @@
 				6F0027C62AE013BF0071EB5D /* BaseService.swift in Sources */,
 				6F0027E32AE0142A0071EB5D /* UIColor+Extension.swift in Sources */,
 				6F0027A82AE013470071EB5D /* AppDelegate.swift in Sources */,
+				6F0028752AE272300071EB5D /* UIWebViewViewController.swift in Sources */,
 				6F0028292AE0354B0071EB5D /* UIDatePickerViewController.swift in Sources */,
 				6F0027EC2AE0142A0071EB5D /* String+Extension.swift in Sources */,
 				6F0027AA2AE013470071EB5D /* SceneDelegate.swift in Sources */,
@@ -662,6 +700,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Document/Document.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B9JYVTVJ6D;
@@ -691,6 +730,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Document/Document.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B9JYVTVJ6D;

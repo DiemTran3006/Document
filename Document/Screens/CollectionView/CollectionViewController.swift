@@ -119,6 +119,8 @@ class CollectionViewController: UIViewController {
                                                                   color: UIColor(red: 0.525, green: 0.765, blue: 0.878, alpha: 1)),
     ]
     @IBOutlet weak var myCollectionView: UICollectionView!
+    
+    private let flowLayout = UICollectionViewFlowLayout()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -127,6 +129,10 @@ class CollectionViewController: UIViewController {
     }
     
     private func ConfigCollectionView() {
+        
+//        flowLayout.minimumLineSpacing = 20
+//        flowLayout.minimumInteritemSpacing = 0
+//        myCollectionView.collectionViewLayout = flowLayout
         myCollectionView.dataSource = self
         myCollectionView.delegate = self
         myCollectionView.register(cellType: CollectionViewCell.self )

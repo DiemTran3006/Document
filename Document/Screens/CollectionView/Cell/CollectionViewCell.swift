@@ -23,4 +23,5 @@ class CollectionViewCell: UICollectionViewCell {
         viewColor.backgroundColor = model.color
   
     }
+   
 }

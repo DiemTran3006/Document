@@ -15,6 +15,9 @@ class PushViewController: UIViewController {
         title = Menu.lifeCycleViewController.title
         print("LifeCycleViewController : View DidLoad")
     }
+    override func viewDidLayoutSubviews() {
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("LifeCycleViewController : viewWillAppear")

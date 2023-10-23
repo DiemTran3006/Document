@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nhung-loi-chuc-sinh-nhat-don-gian-ma-hay-1" translatesAutoresizingMaskIntoConstraints="NO" id="M0R-uL-GHM">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image.birthday" translatesAutoresizingMaskIntoConstraints="NO" id="M0R-uL-GHM">
                     <rect key="frame" x="46.666666666666657" y="89" width="300" height="100"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="Fiu-Uc-Aav"/>
@@ -59,7 +59,7 @@
         </view>
     </objects>
     <resources>
-        <image name="nhung-loi-chuc-sinh-nhat-don-gian-ma-hay-1" width="1500" height="961"/>
+        <image name="image.birthday" width="1500" height="961"/>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

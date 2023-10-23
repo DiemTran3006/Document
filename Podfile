@@ -13,4 +13,10 @@ target 'Document' do
   pod 'AlamofireImage', '~> 4.1'
   pod 'Cosmos', '~> 23.0'
 
+  pod 'FirebaseAnalytics'
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
+  pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit'
+
 end

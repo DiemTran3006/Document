@@ -70,6 +70,12 @@ extension HomeViewController: UITableViewDelegate {
         case .UIDatePicker:
             let controller = UIDatePickerViewController()
             self.navigationController?.pushViewController(controller, animated: true)
+        case .UIWebView:
+            let controller = UIWebViewViewController()
+            self.navigationController?.pushViewController(controller, animated: true)
+        case .loginSocial:
+            let controller = LoginSocialViewController()
+            self.navigationController?.pushViewController(controller, animated: true)
         }
         
     }
@@ -87,6 +93,8 @@ enum Menu: CaseIterable {
     case UIAlert
     case UITimePicker
     case UIDatePicker
+    case UIWebView
+    case loginSocial
     
     
     var title: String {
@@ -103,6 +111,10 @@ enum Menu: CaseIterable {
             return "UITimePicker"
         case .UIDatePicker:
             return "UIDatePicker"
+        case .UIWebView:
+            return "UIWebView"
+        case .loginSocial:
+            return "LoginSocial"
         }
     }
 }
