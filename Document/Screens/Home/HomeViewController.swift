@@ -17,14 +17,14 @@ class HomeViewController: UIViewController {
         title = "Menu"
         configTableView()
     }
-
+    
     func configTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.register(cellType: MenuTableViewCell.self)
     }
-
+    
 }
 
 // MARK: - UITableViewDataSource
@@ -76,6 +76,15 @@ extension HomeViewController: UITableViewDelegate {
         case .loginSocial:
             let controller = LoginSocialViewController()
             self.navigationController?.pushViewController(controller, animated: true)
+        case .pushNotification:
+            let controller =  PushNotificationViewController()
+            self.navigationController?.pushViewController(controller, animated: true)
+        case .dataPassing:
+            let controller =  DataPassingViewController()
+            self.navigationController?.pushViewController(controller, animated: true)
+        case .firebaseStorage:
+            let controller =  FirebaseStorageViewController()
+            self.navigationController?.pushViewController(controller, animated: true)
         }
         
     }
@@ -95,7 +104,9 @@ enum Menu: CaseIterable {
     case UIDatePicker
     case UIWebView
     case loginSocial
-    
+    case dataPassing
+    case pushNotification
+    case firebaseStorage
     
     var title: String {
         switch self {
@@ -115,6 +126,12 @@ enum Menu: CaseIterable {
             return "UIWebView"
         case .loginSocial:
             return "LoginSocial"
+        case .pushNotification:
+            return "PushNotification"
+        case .dataPassing:
+            return "DataPassing"
+        case .firebaseStorage:
+            return "FirebaseStorage"
         }
     }
 }
