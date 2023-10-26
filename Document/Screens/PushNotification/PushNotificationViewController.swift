@@ -14,20 +14,20 @@ class PushNotificationViewController: UIViewController {
         title = Menu.pushNotification.title
     }
     
-    
+//    PushNotication bằnh Local
     @IBAction func pushNotificationLocal(_ sender: Any) {
-        //creating the notification content
+//  tạo nội dung thông báo
         let content = UNMutableNotificationContent()
-        //adding title, subtitle, body and badge
-        content.title = "Hey this is Simplified iOS"
-        content.subtitle = "iOS Development is fun"
-        content.body = "We are learning about iOS Local Notification"
-        //getting the notification trigger
-        //it will be called after 5 seconds
+//  thêm tiêu đề, phụ đề, nội dung và huy hiệu
+        content.title = "Project Document"
+        content.subtitle = "Thông báo"
+        content.body = "Xin Chào"
+//   nhận được trình kích hoạt thông báo
+//   nó sẽ được gọi sau 5 giây
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-        //getting the notification request
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        //adding the notification to notification center
+//   nhận được yêu cầu thông báo
+        let request = UNNotificationRequest(identifier: UUID().uuidString,  content: content, trigger: trigger)
+//   thêm thông báo vào trung tâm thông báo
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     

@@ -188,11 +188,6 @@
             <point key="canvasLocation" x="282" y="9"/>
         </tableViewCell>
     </objects>
-    <designables>
-        <designable name="rtz-ZJ-bln">
-            <size key="intrinsicContentSize" width="120" height="20"/>
-        </designable>
-    </designables>
     <resources>
         <image name="Vector (2)" width="18" height="18"/>
         <image name="Vector (3)" width="18" height="18"/>

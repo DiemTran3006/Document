@@ -158,10 +158,13 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="tr_cornerRadius">
                             <real key="value" value="10"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="tr_borderColor">
+                            <color key="value" systemColor="systemTealColor"/>
+                        </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </stackView>
                 <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uri-XF-DHh">
-                    <rect key="frame" x="0.0" y="104" width="393" height="714"/>
+                    <rect key="frame" x="0.0" y="109" width="393" height="709"/>
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <wkWebViewConfiguration key="configuration">
                         <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -169,7 +172,7 @@
                     </wkWebViewConfiguration>
                 </wkWebView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-AL-PSa">
-                    <rect key="frame" x="178" y="442.66666666666669" width="37" height="37"/>
+                    <rect key="frame" x="178" y="445" width="37" height="37"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
@@ -180,7 +183,7 @@
                 <constraint firstItem="0Lz-73-thW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="LBo-NU-iMB"/>
                 <constraint firstItem="Uri-XF-DHh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Tvp-Wf-oY6"/>
                 <constraint firstItem="0Lz-73-thW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="UhR-e6-q0h"/>
-                <constraint firstItem="Uri-XF-DHh" firstAttribute="top" secondItem="0Lz-73-thW" secondAttribute="bottom" id="Ydh-0Y-TqQ"/>
+                <constraint firstItem="Uri-XF-DHh" firstAttribute="top" secondItem="0Lz-73-thW" secondAttribute="bottom" constant="5" id="Ydh-0Y-TqQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uri-XF-DHh" secondAttribute="trailing" id="fkE-iy-YYY"/>
                 <constraint firstItem="xUd-AL-PSa" firstAttribute="centerY" secondItem="Uri-XF-DHh" secondAttribute="centerY" id="gat-GW-bHu"/>
                 <constraint firstItem="xUd-AL-PSa" firstAttribute="centerX" secondItem="Uri-XF-DHh" secondAttribute="centerX" id="lom-oX-hV1"/>

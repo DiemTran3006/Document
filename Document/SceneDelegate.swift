@@ -8,6 +8,7 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import AlamofireImage
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

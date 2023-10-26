@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Menu"
+        
         configTableView()
     }
     
@@ -43,8 +44,6 @@ extension HomeViewController: UITableViewDataSource {
         cell.configCell(model: menus[indexPath.row])
         return cell
     }
-    
-    
 }
 
 // MARK: - UITableViewDelegate
@@ -70,6 +69,9 @@ extension HomeViewController: UITableViewDelegate {
         case .UIDatePicker:
             let controller = UIDatePickerViewController()
             self.navigationController?.pushViewController(controller, animated: true)
+        case .dataPassing:
+            let controller =  DataPassingViewController()
+            self.navigationController?.pushViewController(controller, animated: true)
         case .UIWebView:
             let controller = UIWebViewViewController()
             self.navigationController?.pushViewController(controller, animated: true)
@@ -78,9 +80,6 @@ extension HomeViewController: UITableViewDelegate {
             self.navigationController?.pushViewController(controller, animated: true)
         case .pushNotification:
             let controller =  PushNotificationViewController()
-            self.navigationController?.pushViewController(controller, animated: true)
-        case .dataPassing:
-            let controller =  DataPassingViewController()
             self.navigationController?.pushViewController(controller, animated: true)
         case .firebaseStorage:
             let controller =  FirebaseStorageViewController()
@@ -102,9 +101,9 @@ enum Menu: CaseIterable {
     case UIAlert
     case UITimePicker
     case UIDatePicker
+    case dataPassing
     case UIWebView
     case loginSocial
-    case dataPassing
     case pushNotification
     case firebaseStorage
     
@@ -122,14 +121,14 @@ enum Menu: CaseIterable {
             return "UITimePicker"
         case .UIDatePicker:
             return "UIDatePicker"
+        case .dataPassing:
+            return "DataPassing"
         case .UIWebView:
             return "UIWebView"
         case .loginSocial:
             return "LoginSocial"
         case .pushNotification:
             return "PushNotification"
-        case .dataPassing:
-            return "DataPassing"
         case .firebaseStorage:
             return "FirebaseStorage"
         }

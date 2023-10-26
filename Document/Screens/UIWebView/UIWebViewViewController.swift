@@ -49,6 +49,7 @@ class UIWebViewViewController: UIViewController {
         }
     }
     @IBAction func actionReload(_ sender: Any) {
+//        Reload lại Data
         webView.reload()
     }
     
@@ -56,7 +57,7 @@ class UIWebViewViewController: UIViewController {
         
         if let url = URL(string: searchTextfield.text ?? "") {
             var link: String = searchTextfield.text ?? ""
-            
+//         hasPrefix kiểm tra xem link có chứa đường dẫn "http://" && "https://"
             if link.hasPrefix("http://") || link.hasPrefix("https://") {
                 let urlRequest = URLRequest(url: url)
                 webView.load(urlRequest)
@@ -79,12 +80,12 @@ class UIWebViewViewController: UIViewController {
     }
 }
 extension UIWebViewViewController: WKNavigationDelegate {
-    
+//    Khi đã tải xong nội dung
     func webView(_ webView: WKWebView,
                  didFinish navigation: WKNavigation!) {
         activityIndicator.stopAnimating()
     }
-    
+//    Bắt đầu tải nội dung vào webView
     func webView(_ webView: WKWebView,
                  didStartProvisionalNavigation navigation: WKNavigation!) {
         activityIndicator.startAnimating()

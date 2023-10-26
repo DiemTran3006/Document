@@ -21,6 +21,7 @@ target 'Document' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'Firebase/Storage'
+  pod 'R.swift'
 
 
 end
