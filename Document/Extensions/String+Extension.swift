@@ -34,6 +34,12 @@ extension String {
     // MARK: - Validation
     var containsEmoji: Bool { contains { $0.isEmoji } }
     
+    var isUserName: Bool {
+        if isEmpty { return false }
+        let usernameRegex = "^(?=.*[A-Za-z])(?=.*\\d).{8,}$"
+        let usernameTest = NSPredicate(format: "SELF MATCHES %@", usernameRegex)
+        return usernameTest.evaluate(with: self)
+    }
     var isValidEmail: Bool {
         if isEmpty { return false }
         let emailRegex = "(?:[a-zA-Z0-9!#$%\\&‘*+/=?\\^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%\\&'*+/=?\\^_`{|}" +

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APIDemoViewController" customModule="Document" customModuleProvider="target">
+            <connections>
+                <outlet property="serviceLoginLabel" destination="5L5-ym-EHd" id="WgU-pn-7TE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yn7-g8-1fg">
+                    <rect key="frame" x="24" y="59" width="345" height="759"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let’s start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8H-On-NEv">
+                            <rect key="frame" x="0.0" y="0.0" width="345" height="29.666666666666668"/>
+                            <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create account to record what you’re Document!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edz-kT-l9P">
+                            <rect key="frame" x="0.0" y="29.666666666666675" width="345" height="13.666666666666668"/>
+                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jk6-b7-vdj" userLabel="dass">
+                            <rect key="frame" x="0.0" y="43.333333333333329" width="345" height="77"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="77" id="IPV-9d-2BE"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eUT-ur-1ag" userLabel="ContainerViewGoogle">
+                            <rect key="frame" x="0.0" y="120.33333333333334" width="345" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAY-NN-vtW">
+                                    <rect key="frame" x="48.666666666666671" y="0.0" width="247.66666666666663" height="44"/>
+                                    <color key="backgroundColor" name="textButton"/>
+                                    <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title=" Connect with Google " image="icon_google">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="tr_cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="loginGooogle:" destination="-1" eventType="touchUpInside" id="tn1-lm-J9w"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="mAY-NN-vtW" firstAttribute="width" secondItem="eUT-ur-1ag" secondAttribute="width" multiplier="280/390" id="bdQ-EQ-Udp"/>
+                                <constraint firstItem="mAY-NN-vtW" firstAttribute="centerX" secondItem="eUT-ur-1ag" secondAttribute="centerX" id="jns-7Q-lEK"/>
+                                <constraint firstAttribute="height" constant="44" id="rN0-X9-AAn"/>
+                                <constraint firstAttribute="bottom" secondItem="mAY-NN-vtW" secondAttribute="bottom" id="sLZ-Re-c7b"/>
+                                <constraint firstItem="mAY-NN-vtW" firstAttribute="top" secondItem="eUT-ur-1ag" secondAttribute="top" id="wGd-bD-Twh"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ElE-hv-xhO" userLabel="dass">
+                            <rect key="frame" x="0.0" y="164.33333333333334" width="345" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="OOy-5y-08j"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngf-2d-oBe" userLabel="ContainerViewFacebook">
+                            <rect key="frame" x="0.0" y="194.33333333333334" width="345" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41M-DA-OUo">
+                                    <rect key="frame" x="48.666666666666671" y="0.0" width="247.66666666666663" height="44"/>
+                                    <color key="backgroundColor" name="textButton"/>
+                                    <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title=" Connect with Faebook " image="icon_facebook">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="tr_cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="loginFacebook:" destination="-1" eventType="touchUpInside" id="IBk-Ib-51q"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="3RR-is-ZcB"/>
+                                <constraint firstAttribute="bottom" secondItem="41M-DA-OUo" secondAttribute="bottom" id="8jK-2S-IUm"/>
+                                <constraint firstItem="41M-DA-OUo" firstAttribute="width" secondItem="Ngf-2d-oBe" secondAttribute="width" multiplier="280/390" id="baa-He-5ax"/>
+                                <constraint firstItem="41M-DA-OUo" firstAttribute="centerX" secondItem="Ngf-2d-oBe" secondAttribute="centerX" id="gRI-YL-wE3"/>
+                                <constraint firstItem="41M-DA-OUo" firstAttribute="top" secondItem="Ngf-2d-oBe" secondAttribute="top" id="sof-wy-f8l"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyc-gX-GED" userLabel="dass">
+                            <rect key="frame" x="0.0" y="238.33333333333331" width="345" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="5SO-fr-U0i"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nc-cl-st1" userLabel="ContainerViewApple">
+                            <rect key="frame" x="0.0" y="268.33333333333331" width="345" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4td-F5-V2p">
+                                    <rect key="frame" x="48.666666666666671" y="0.0" width="247.66666666666663" height="44"/>
+                                    <color key="backgroundColor" systemColor="labelColor"/>
+                                    <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title=" Connect with Apple" image="icons8_apple">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="tr_cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="loginApple:" destination="-1" eventType="touchUpInside" id="ppa-1J-0WV"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="Jrc-7T-Qth"/>
+                                <constraint firstItem="4td-F5-V2p" firstAttribute="top" secondItem="4nc-cl-st1" secondAttribute="top" id="KcM-MF-RbL"/>
+                                <constraint firstAttribute="bottom" secondItem="4td-F5-V2p" secondAttribute="bottom" id="Kox-Yb-lVs"/>
+                                <constraint firstItem="4td-F5-V2p" firstAttribute="centerX" secondItem="4nc-cl-st1" secondAttribute="centerX" id="Mcm-sV-8Kc"/>
+                                <constraint firstItem="4td-F5-V2p" firstAttribute="width" secondItem="4nc-cl-st1" secondAttribute="width" multiplier="280/390" id="bLB-ec-eak"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gac-na-zWU" userLabel="dass">
+                            <rect key="frame" x="0.0" y="312.33333333333331" width="345" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="T5w-Bi-AUe"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pE3-le-GEw" userLabel="ContainerViewInstagram">
+                            <rect key="frame" x="0.0" y="342.33333333333331" width="345" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTN-Ka-oEo">
+                                    <rect key="frame" x="48.666666666666671" y="0.0" width="247.66666666666663" height="44"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title=" Connect with Instagram" image="icon_instagram">
+                                        <color key="titleColor" systemColor="labelColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="tr_cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="tr_borderColor">
+                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="tr_borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="LoginInstagram:" destination="-1" eventType="touchUpInside" id="z3Y-Vo-nTQ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="XTN-Ka-oEo" firstAttribute="top" secondItem="pE3-le-GEw" secondAttribute="top" id="8hD-Yh-Bf0"/>
+                                <constraint firstItem="XTN-Ka-oEo" firstAttribute="centerX" secondItem="pE3-le-GEw" secondAttribute="centerX" id="FuX-Vt-MCe"/>
+                                <constraint firstAttribute="bottom" secondItem="XTN-Ka-oEo" secondAttribute="bottom" id="WdF-Xt-ouF"/>
+                                <constraint firstItem="XTN-Ka-oEo" firstAttribute="width" secondItem="pE3-le-GEw" secondAttribute="width" multiplier="280/390" id="cR2-lP-Xck"/>
+                                <constraint firstAttribute="height" constant="44" id="jts-1P-dlo"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jc8-eV-E9A" userLabel="dass">
+                            <rect key="frame" x="0.0" y="386.33333333333331" width="345" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="ZqR-0R-xy5"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="doM-f3-0LE" userLabel="ContainerViewZalo">
+                            <rect key="frame" x="0.0" y="416.33333333333331" width="345" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DU-cU-GJ9">
+                                    <rect key="frame" x="48.666666666666671" y="0.0" width="247.66666666666663" height="44"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title=" Connect with Zalo" image="icon_zalo">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="tr_cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="tr_borderColor">
+                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="tr_borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="loginZalo:" destination="-1" eventType="touchUpInside" id="IXH-SS-7bp"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="4DU-cU-GJ9" secondAttribute="bottom" id="0Xh-Oy-OG0"/>
+                                <constraint firstAttribute="height" constant="44" id="9YS-O0-l7i"/>
+                                <constraint firstItem="4DU-cU-GJ9" firstAttribute="centerX" secondItem="doM-f3-0LE" secondAttribute="centerX" id="Fvm-KP-gvV"/>
+                                <constraint firstItem="4DU-cU-GJ9" firstAttribute="width" secondItem="doM-f3-0LE" secondAttribute="width" multiplier="280/390" id="T9H-KD-8ZD"/>
+                                <constraint firstItem="4DU-cU-GJ9" firstAttribute="top" secondItem="doM-f3-0LE" secondAttribute="top" id="niL-v4-pJ7"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6GI-I4-0zt" userLabel="dass">
+                            <rect key="frame" x="0.0" y="460.33333333333337" width="345" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="y9z-9b-LyO"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbw-Pp-xyM">
+                            <rect key="frame" x="0.0" y="490.33333333333337" width="345" height="110"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Already have an account? ">
+                                <color key="titleColor" red="0.46274509800000002" green="0.41176470590000003" blue="0.41176470590000003" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ud-BC-OYd">
+                            <rect key="frame" x="0.0" y="600.33333333333337" width="345" height="32"/>
+                            <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Login">
+                                <color key="titleColor" name="textButton"/>
+                            </state>
+                            <connections>
+                                <action selector="actionLogin:" destination="-1" eventType="touchUpInside" id="MhQ-SV-p03"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXP-UY-Jwh" userLabel="dass">
+                            <rect key="frame" x="0.0" y="632.33333333333337" width="345" height="66.666666666666629"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6b-WU-8G8" userLabel="ContainerViewLabel">
+                            <rect key="frame" x="0.0" y="699" width="345" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By registering, you agree to our Terms of Service" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L5-ym-EHd">
+                                    <rect key="frame" x="25" y="0.0" width="295" height="50"/>
+                                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="16"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="5L5-ym-EHd" secondAttribute="trailing" constant="25" id="0bS-bd-laJ"/>
+                                <constraint firstItem="5L5-ym-EHd" firstAttribute="leading" secondItem="s6b-WU-8G8" secondAttribute="leading" constant="25" id="5D3-rE-G2B"/>
+                                <constraint firstItem="5L5-ym-EHd" firstAttribute="top" secondItem="s6b-WU-8G8" secondAttribute="top" id="D1n-Zd-9A1"/>
+                                <constraint firstAttribute="bottom" secondItem="5L5-ym-EHd" secondAttribute="bottom" id="zVG-Zh-nuN"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZH8-Fb-sQh" userLabel="dass">
+                            <rect key="frame" x="0.0" y="749" width="345" height="10"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="10" id="4HH-yz-PRx"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Yn7-g8-1fg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="6Sw-qq-3hp"/>
+                <constraint firstItem="Yn7-g8-1fg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Qeb-Iw-PHo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Yn7-g8-1fg" secondAttribute="bottom" id="c28-VX-kZ3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Yn7-g8-1fg" secondAttribute="trailing" constant="24" id="htr-lc-GXb"/>
+            </constraints>
+            <point key="canvasLocation" x="64.885496183206101" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_facebook" width="20" height="20"/>
+        <image name="icon_google" width="20" height="20"/>
+        <image name="icon_instagram" width="30" height="30"/>
+        <image name="icon_zalo" width="44" height="44"/>
+        <image name="icons8_apple" width="25" height="25"/>
+        <namedColor name="textButton">
+            <color red="0.16099999845027924" green="0.3059999942779541" blue="0.40799999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -30,8 +30,6 @@ class DataPassingViewController: UIViewController {
         hideKeyboardWhenTappedAround()
         checkValidate()
     }
- 
-
     @IBAction func changedEmailTextfield(_ sender: Any) {
         checkValidate()
     }
@@ -75,7 +73,6 @@ class DataPassingViewController: UIViewController {
 
 extension DataPassingViewController: DataDetailsProtocol {
     func popView(message: String) {
-        print(message)
         receiveDataTextfield.text = message
     }
 }

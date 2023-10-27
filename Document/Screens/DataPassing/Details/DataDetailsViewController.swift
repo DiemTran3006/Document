@@ -15,7 +15,6 @@ class DataDetailsViewController: UIViewController {
     
     var email = ""
     var password = ""
-    
 
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -38,7 +37,7 @@ class DataDetailsViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
         delegate?.popView(message: "Truyền lại Data: \(emailLabel.text!)")
     }
-    func settingAttrLabel() {
+  private  func settingAttrLabel() {
         let attrText = NSMutableAttributedString.getAttributedString(fromString: "Password: \(password)")
         let attrText2 = NSMutableAttributedString.getAttributedString(fromString: "Email: \(email)")
         attrText.apply(color: UIColor(hexString: "#FFFFFF"), subString: password)
@@ -52,7 +51,6 @@ class DataDetailsViewController: UIViewController {
         emailLabel.addGestureRecognizer(tap)
         emailLabel.isUserInteractionEnabled = true
     }
-    
     @objc func tapLabelProvision(tap: UITapGestureRecognizer) {
     }
     

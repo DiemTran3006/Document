@@ -84,6 +84,9 @@ extension HomeViewController: UITableViewDelegate {
         case .firebaseStorage:
             let controller =  FirebaseStorageViewController()
             self.navigationController?.pushViewController(controller, animated: true)
+        case .callAPI:
+            let controller =  APIDemoViewController()
+            self.navigationController?.pushViewController(controller, animated: true)
         }
         
     }
@@ -106,6 +109,7 @@ enum Menu: CaseIterable {
     case loginSocial
     case pushNotification
     case firebaseStorage
+    case callAPI
     
     var title: String {
         switch self {
@@ -131,6 +135,8 @@ enum Menu: CaseIterable {
             return "PushNotification"
         case .firebaseStorage:
             return "FirebaseStorage"
+        case .callAPI:
+            return "CallAPI"
         }
     }
 }

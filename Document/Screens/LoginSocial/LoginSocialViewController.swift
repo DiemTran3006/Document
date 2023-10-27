@@ -14,12 +14,17 @@ import FBSDKLoginKit
 import AlamofireImage
 import AuthenticationServices
 
+protocol LoginSocialProtocol: AnyObject {
+}
+
 class LoginSocialViewController: UIViewController {
+    
+    var currentNonce: String?
     
     @IBOutlet weak var avatarView: UIImageView!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    var currentNonce: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Menu.loginSocial.title

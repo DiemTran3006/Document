@@ -37,7 +37,6 @@ extension LoginSocialViewController {
                 
                 self.setUser(name: displayName, email: email, avatarUrl: photoURL)
             }
-            
         }
     }
 }

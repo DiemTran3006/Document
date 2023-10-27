@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseCore
 import AuthenticationServices
 
-extension LoginSocialViewController {
+extension LoginSocialViewController  {
     
     public func startSignInWithAppleFlow() {
         let nonce = randomNonceString()
@@ -38,7 +38,6 @@ extension LoginSocialViewController {
         return hashString
     }
     
-    
     private func randomNonceString(length: Int = 32) -> String {
         precondition(length > 0)
         var randomBytes = [UInt8](repeating: 0, count: length)
@@ -60,9 +59,7 @@ extension LoginSocialViewController {
         
         return String(nonce)
     }
-    
 }
-
 
 extension LoginSocialViewController: ASAuthorizationControllerDelegate,
                                      ASAuthorizationControllerPresentationContextProviding {

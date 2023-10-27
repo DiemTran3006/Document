@@ -58,12 +58,18 @@
 		6F00282F2AE0C8630071EB5D /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F00282D2AE0C8630071EB5D /* CollectionViewCell.xib */; };
 		6F0028752AE272300071EB5D /* UIWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0028732AE272300071EB5D /* UIWebViewViewController.swift */; };
 		6F0028762AE272300071EB5D /* UIWebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F0028742AE272300071EB5D /* UIWebViewViewController.xib */; };
+		6F4B16C62AEA6E63009B0998 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4B16C42AEA6E63009B0998 /* RegisterViewController.swift */; };
+		6F4B16C72AEA6E63009B0998 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F4B16C52AEA6E63009B0998 /* RegisterViewController.xib */; };
+		6F4B16CA2AEB50F4009B0998 /* APIDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4B16C82AEB50F4009B0998 /* APIDemoViewController.swift */; };
+		6F4B16CB2AEB50F4009B0998 /* APIDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F4B16C92AEB50F4009B0998 /* APIDemoViewController.xib */; };
 		6F6BF13E2AE7BC57000F6C03 /* FirebaseStorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BF13C2AE7BC57000F6C03 /* FirebaseStorageViewController.swift */; };
 		6F6BF13F2AE7BC57000F6C03 /* FirebaseStorageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F6BF13D2AE7BC57000F6C03 /* FirebaseStorageViewController.xib */; };
 		6F91A0992AE8DF7C00B4BA54 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F91A0982AE8DF7C00B4BA54 /* R.generated.swift */; };
 		6F91A09C2AE9643F00B4BA54 /* LoginSocial+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F91A09B2AE9643F00B4BA54 /* LoginSocial+Apple.swift */; };
 		6F91A09E2AE9684100B4BA54 /* LoginSocial+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F91A09D2AE9684100B4BA54 /* LoginSocial+Google.swift */; };
 		6F91A0A02AE968AF00B4BA54 /* LoginSocial+Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F91A09F2AE968AF00B4BA54 /* LoginSocial+Facebook.swift */; };
+		6F91A0AD2AEA5EDD00B4BA54 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F91A0AB2AEA5EDD00B4BA54 /* LoginViewController.swift */; };
+		6F91A0AE2AEA5EDD00B4BA54 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F91A0AC2AEA5EDD00B4BA54 /* LoginViewController.xib */; };
 		6F9663AE2AE76FBE005251DA /* PushNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9663AC2AE76FBE005251DA /* PushNotificationViewController.swift */; };
 		6F9663AF2AE76FBE005251DA /* PushNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9663AD2AE76FBE005251DA /* PushNotificationViewController.xib */; };
 		6F9663B52AE77E9B005251DA /* DataPassingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9663B32AE77E9B005251DA /* DataPassingViewController.swift */; };
@@ -132,12 +138,18 @@
 		6F00282D2AE0C8630071EB5D /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		6F0028732AE272300071EB5D /* UIWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWebViewViewController.swift; sourceTree = "<group>"; };
 		6F0028742AE272300071EB5D /* UIWebViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIWebViewViewController.xib; sourceTree = "<group>"; };
+		6F4B16C42AEA6E63009B0998 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		6F4B16C52AEA6E63009B0998 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		6F4B16C82AEB50F4009B0998 /* APIDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDemoViewController.swift; sourceTree = "<group>"; };
+		6F4B16C92AEB50F4009B0998 /* APIDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = APIDemoViewController.xib; sourceTree = "<group>"; };
 		6F6BF13C2AE7BC57000F6C03 /* FirebaseStorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageViewController.swift; sourceTree = "<group>"; };
 		6F6BF13D2AE7BC57000F6C03 /* FirebaseStorageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirebaseStorageViewController.xib; sourceTree = "<group>"; };
 		6F91A0982AE8DF7C00B4BA54 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		6F91A09B2AE9643F00B4BA54 /* LoginSocial+Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginSocial+Apple.swift"; sourceTree = "<group>"; };
 		6F91A09D2AE9684100B4BA54 /* LoginSocial+Google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginSocial+Google.swift"; sourceTree = "<group>"; };
 		6F91A09F2AE968AF00B4BA54 /* LoginSocial+Facebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginSocial+Facebook.swift"; sourceTree = "<group>"; };
+		6F91A0AB2AEA5EDD00B4BA54 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6F91A0AC2AEA5EDD00B4BA54 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		6F9663AC2AE76FBE005251DA /* PushNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationViewController.swift; sourceTree = "<group>"; };
 		6F9663AD2AE76FBE005251DA /* PushNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushNotificationViewController.xib; sourceTree = "<group>"; };
 		6F9663B32AE77E9B005251DA /* DataPassingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassingViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +277,7 @@
 		6F0027EF2AE014340071EB5D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				6F91A0AA2AEA5E5600B4BA54 /* CallAPI */,
 				6F6BF13B2AE7BC27000F6C03 /* FirebaseStorage */,
 				6F9663AB2AE76F9E005251DA /* PushNotification */,
 				6FC0811B2AE4E62D008AF804 /* LoginSocial */,
@@ -410,6 +423,43 @@
 			path = FirebaseStorage;
 			sourceTree = "<group>";
 		};
+		6F91A0A82AEA5DAE00B4BA54 /* Rigister */ = {
+			isa = PBXGroup;
+			children = (
+				6F4B16C42AEA6E63009B0998 /* RegisterViewController.swift */,
+				6F4B16C52AEA6E63009B0998 /* RegisterViewController.xib */,
+			);
+			path = Rigister;
+			sourceTree = "<group>";
+		};
+		6F91A0A92AEA5DDC00B4BA54 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6F91A0AA2AEA5E5600B4BA54 /* CallAPI */ = {
+			isa = PBXGroup;
+			children = (
+				6F4B16C82AEB50F4009B0998 /* APIDemoViewController.swift */,
+				6F4B16C92AEB50F4009B0998 /* APIDemoViewController.xib */,
+				6F91A0B32AEA606400B4BA54 /* Login */,
+				6F91A0A82AEA5DAE00B4BA54 /* Rigister */,
+				6F91A0A92AEA5DDC00B4BA54 /* Home */,
+			);
+			path = CallAPI;
+			sourceTree = "<group>";
+		};
+		6F91A0B32AEA606400B4BA54 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6F91A0AB2AEA5EDD00B4BA54 /* LoginViewController.swift */,
+				6F91A0AC2AEA5EDD00B4BA54 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		6F9663AB2AE76F9E005251DA /* PushNotification */ = {
 			isa = PBXGroup;
 			children = (
@@ -533,11 +583,14 @@
 				6F0027B72AE013480071EB5D /* LaunchScreen.storyboard in Resources */,
 				6F0027B42AE013480071EB5D /* Assets.xcassets in Resources */,
 				6F0027F92AE015940071EB5D /* MenuTableViewCell.xib in Resources */,
+				6F91A0AE2AEA5EDD00B4BA54 /* LoginViewController.xib in Resources */,
 				6F00282A2AE0354B0071EB5D /* UIDatePickerViewController.xib in Resources */,
 				6F9663AF2AE76FBE005251DA /* PushNotificationViewController.xib in Resources */,
 				6F00282F2AE0C8630071EB5D /* CollectionViewCell.xib in Resources */,
 				6F00281B2AE023420071EB5D /* TableViewCell.xib in Resources */,
 				6F0028162AE01F4F0071EB5D /* PopViewController.xib in Resources */,
+				6F4B16C72AEA6E63009B0998 /* RegisterViewController.xib in Resources */,
+				6F4B16CB2AEB50F4009B0998 /* APIDemoViewController.xib in Resources */,
 				6F0028262AE035350071EB5D /* UITimePickerViewController.xib in Resources */,
 				6F0028112AE01F250071EB5D /* PushViewController.xib in Resources */,
 				6F0028202AE0336B0071EB5D /* UIAlertViewController.xib in Resources */,
@@ -621,6 +674,7 @@
 			files = (
 				6F0028252AE035350071EB5D /* UITimePickerViewController.swift in Sources */,
 				6F0027C42AE013BF0071EB5D /* Configs.swift in Sources */,
+				6F4B16C62AEA6E63009B0998 /* RegisterViewController.swift in Sources */,
 				6F00282E2AE0C8630071EB5D /* CollectionViewCell.swift in Sources */,
 				6F0027C52AE013BF0071EB5D /* ConfigurationBase.swift in Sources */,
 				6F0027C72AE013BF0071EB5D /* Enviroment.swift in Sources */,
@@ -657,8 +711,10 @@
 				6F0027EC2AE0142A0071EB5D /* String+Extension.swift in Sources */,
 				6F0027AA2AE013470071EB5D /* SceneDelegate.swift in Sources */,
 				6F0027E92AE0142A0071EB5D /* UICollectionView+Extension.swift in Sources */,
+				6F4B16CA2AEB50F4009B0998 /* APIDemoViewController.swift in Sources */,
 				6F0027C82AE013BF0071EB5D /* ServiceConstant.swift in Sources */,
 				6F0028152AE01F4F0071EB5D /* PopViewController.swift in Sources */,
+				6F91A0AD2AEA5EDD00B4BA54 /* LoginViewController.swift in Sources */,
 				6F0027E22AE0142A0071EB5D /* ViewProtocol+Extension.swift in Sources */,
 				6F91A0992AE8DF7C00B4BA54 /* R.generated.swift in Sources */,
 				6F0027E72AE0142A0071EB5D /* NSAttributedString+Extension.swift in Sources */,
