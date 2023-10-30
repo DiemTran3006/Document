@@ -10,7 +10,7 @@ import Toast_Swift
 import MaterialComponents
 
 class RegisterViewController: UIViewController {
-    
+    var linkImage: String = ""
     var activeField: UITextField?
     var lastOffset: CGPoint?
     
@@ -27,18 +27,6 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var cameraImage: UIImageView!
     @IBOutlet weak var serviceLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        customTextField()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        customTextField()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,7 +109,7 @@ class RegisterViewController: UIViewController {
         }
     }
     
-    func customTextField() {
+    private func customTextField() {
         nameTextfield.label.text = "Name"
         nameTextfield.containerRadius = 10
         nameTextfield.setOutlineColor(.init(hexString: "8E7F7F"), for: .normal)
@@ -147,7 +135,7 @@ class RegisterViewController: UIViewController {
         confirmPasswordTextField.sizeToFit()
     }
     
-    func viewCheckFormat() {
+    private func viewCheckFormat() {
         errorName.isHidden = true
         errorEmail.isHidden = true
         errorPassword.isHidden = true
@@ -167,23 +155,28 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func starButton(_ sender: Any) {
+        
         let param: RegisterRequest = RegisterRequest(email: emailTextfield.text!,
                                                      password: passwordTextfield.text!,
-                                                     user_name: nameTextfield.text!)
-
+                                                     user_name: nameTextfield.text!,
+                                                     ip_register: linkImage,
+                                                     device_register: AppConstant.IPAddress.asStringOrEmpty(),
+                                                     link_avatar: AppConstant.modelName.asStringOrEmpty()
+        )
         APIFetchManager.shared.register(param: param) { [weak self] apiData in
             self?.view.makeToast(apiData.message , position: .bottom)
+            print(apiData)
         } handlerError: { error in
             self.view.makeToast(error , position: .bottom)
         }
         
-        let alert = UIAlertController(title: "UIAlertController", message: "Would you like to continue learning how to use iOS alerts?", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Register", message: "Do you want to continue registering?", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Continue", style: UIAlertAction.Style.default, handler: {_ in self.login()}))
-           alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
-           self.present(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
-    func login() {
+    private func login() {
         let VC = LoginViewController(nibName: "LoginViewController", bundle: nil)
         VC.email = emailTextfield.text ?? ""
         VC.password = passwordTextfield.text ?? ""

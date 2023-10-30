@@ -23,14 +23,16 @@ class ForgotPasswordViewController: UIViewController {
         hideKeyboardWhenTappedAround()
     }
     
-    func customTextField() {
+    private func customTextField() {
+        
         resetPasswordTextfiled.label.text = "Reset Password"
         resetPasswordTextfiled.containerRadius = 10
         resetPasswordTextfiled.setOutlineColor(.init(hexString: "8E7F7F"), for: .normal)
         resetPasswordTextfiled.setOutlineColor(.init(hexString: "8E7F7F"), for: .editing)
         resetPasswordTextfiled.sizeToFit()
     }
-    func checkValidate() {
+    private func checkValidate() {
+        
         let email = resetPasswordTextfiled.text.asStringOrEmpty()
         if  email.isValidEmail || email.isEmpty {
             resetPasswordTextfiled.setOutlineColor(.init(hexString: "8E7F7F"), for: .normal)
@@ -56,8 +58,8 @@ class ForgotPasswordViewController: UIViewController {
     
     @IBAction func actionResetPasswordButton(_ sender: Any) {
         let pram: ResetPassworResquest = ResetPassworResquest(email: resetPasswordTextfiled.text!)
-        APIFetchManager.shared.resetPassword(param: pram) { apiData in
-            self.view.makeToast(apiData.message , position: .bottom)
+        APIFetchManager.shared.resetPassword(param: pram) { [weak self] apiData in
+            self?.view.makeToast(apiData.message , position: .bottom)
         } handlerError: { error in
             self.view.makeToast(error , position: .bottom)
         }
@@ -66,9 +68,9 @@ class ForgotPasswordViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-    func PopLogin() {
+    private func PopLogin() {
         let VC = LoginViewController(nibName: "LoginViewController", bundle: nil)
-        self.navigationController?.pushViewController( VC, animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func actionPopLogin(_ sender: Any) {

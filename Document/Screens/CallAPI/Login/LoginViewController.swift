@@ -16,22 +16,23 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextfield: MDCOutlinedTextField!
     @IBOutlet weak var passwordTextfield: MDCOutlinedTextField!
-
-        
+    
+    
     @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        passwordTextfield.enablePasswordToggle()
         title = Menu.callAPI.title
         emailTextfield.text = email
         passwordTextfield.text = password
         checkValidate()
         propertiesTextfiled()
         hideKeyboardWhenTappedAround()
-        self.navigationController?.isNavigationBarHidden = true
         customTextField()
     }
     
-    func customTextField() {
+    private func customTextField() {
         emailTextfield.label.text = "Email"
         emailTextfield.containerRadius = 10
         emailTextfield.setOutlineColor(.init(hexString: "8E7F7F"), for: .normal)
@@ -44,7 +45,7 @@ class LoginViewController: UIViewController {
         passwordTextfield.setOutlineColor(.init(hexString: "8E7F7F"), for: .editing)
         passwordTextfield.sizeToFit()
     }
-
+    
     @IBAction func changeEmaialTextfield(_ sender: Any) {
         checkValidate()
     }
@@ -56,15 +57,19 @@ class LoginViewController: UIViewController {
     @IBAction func actionLogin(_ sender: Any) {
         let param: LoginRequest = LoginRequest(email: emailTextfield.text!,
                                                password: passwordTextfield.text!)
-        APIFetchManager.shared.login(param: param) { apiData in
-            print(apiData)
+        APIFetchManager.shared.login(param: param) { [weak self] apiData in
+            guard let self = self else { return }
+            AppConstant.saveUser(model: apiData)
+            self.view.makeToast("Login Succsess" , position: .bottom)
+            self.navigationController?.setRootViewController(viewController: ProfileViewController() ,
+                                                             controllerType: ProfileViewController.self)
         } handlerError: { error in
-            print(error)
+            self.view.makeToast(error , position: .bottom)
         }
-
+        
     }
-   private func checkValidate() {
-       
+    private func checkValidate() {
+        
         let password = passwordTextfield.text.asStringOrEmpty()
         let email = emailTextfield.text.asStringOrEmpty()
         
@@ -74,17 +79,14 @@ class LoginViewController: UIViewController {
         } else {
             emailTextfield.setOutlineColor(.init(hexString: "DA1414"), for: .normal)
             emailTextfield.setOutlineColor(.init(hexString: "DA1414"), for: .editing)
-
         }
-        
-       if  password.isValidPassword || password.isEmpty {
-           passwordTextfield.setOutlineColor(.init(hexString: "8E7F7F"), for: .normal)
-           passwordTextfield.setOutlineColor(.init(hexString: "8E7F7F"), for: .editing)
-       } else {
-           passwordTextfield.setOutlineColor(.init(hexString: "DA1414"), for: .normal)
-           passwordTextfield.setOutlineColor(.init(hexString: "DA1414"), for: .editing)
-       }
-      
+        if  password.isValidPassword || password.isEmpty {
+            passwordTextfield.setOutlineColor(.init(hexString: "8E7F7F"), for: .normal)
+            passwordTextfield.setOutlineColor(.init(hexString: "8E7F7F"), for: .editing)
+        } else {
+            passwordTextfield.setOutlineColor(.init(hexString: "DA1414"), for: .normal)
+            passwordTextfield.setOutlineColor(.init(hexString: "DA1414"), for: .editing)
+        }
         if email.isValidEmail && password.isValidPassword {
             loginButton.isUserInteractionEnabled = true
             loginButton.backgroundColor = .init(hexString: "294E68")
@@ -98,8 +100,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func actionPop(_ sender: Any) {
-        let VC = APIDemoViewController(nibName: "APIDemoViewController", bundle: nil)
-        self.navigationController?.pushViewController( VC, animated: true)
+            self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func pushFogotPassword(_ sender: Any) {
@@ -112,6 +113,4 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController( VC, animated: true)
     }
 }
-extension LoginViewController: UITextFieldDelegate {
 
-}

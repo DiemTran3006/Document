@@ -13,7 +13,7 @@ struct AppConstant {
         get { UserDefaults.standard.value(forKey: "locale-setting") as? String ?? "en-us" }
         set { UserDefaults.standard.setValue(newValue, forKey: "locale-setting") }
     }
-    
+    static var modelName: String?
     static var accessToken: String? {
         get { UserDefaults.standard.value(forKey: "access-token") as? String }
         
@@ -26,9 +26,20 @@ struct AppConstant {
             }
         }
     }
+    static var IPAddress: String? {
+        get { UserDefaults.standard.value(forKey: "IPAddress") as? String }
+        set {
+            if newValue == nil {
+                UserDefaults.standard.removeObject(forKey: "IPAddress")
+                UserDefaults.standard.synchronize()
+            } else {
+                UserDefaults.standard.setValue(newValue, forKey: "IPAddress")
+            }
+        }
+    }
     
-    static var userId: String? {
-        get { UserDefaults.standard.value(forKey: "userId") as? String }
+    static var userId: Int? {
+        get { UserDefaults.standard.value(forKey: "userId") as? Int }
         set {
             if newValue == nil {
                 UserDefaults.standard.removeObject(forKey: "userId")
@@ -38,8 +49,33 @@ struct AppConstant {
             }
         }
     }
+    static var linkAvatar: String? {
+        get { UserDefaults.standard.value(forKey: "linkAvatar") as? String }
+        set {
+            if newValue == nil {
+                UserDefaults.standard.removeObject(forKey: "linkAvatar")
+                UserDefaults.standard.synchronize()
+            } else {
+                UserDefaults.standard.setValue(newValue, forKey: "linkAvatar")
+            }
+        }
+    }
 }
-
+extension AppConstant {
+    
+    static func saveIp(model: IPAddress) {
+        IPAddress = model.ip
+    }
+    
+    static func logout() {
+        userId = nil
+    }
+    static func saveUser(model: LoginModel) {
+        userId = model.id_user
+        linkAvatar = model.link_avatar
+    }
+  
+}
 
 extension UserDefaults {
     func object<T: Codable>(_ type: T.Type, with key: String, usingDecoder decoder: JSONDecoder = JSONDecoder()) -> T? {

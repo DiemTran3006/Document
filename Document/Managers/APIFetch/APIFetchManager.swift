@@ -18,7 +18,10 @@ class APIFetchManager {
         let paramters: Parameters = [
             "email" : param.email,
             "password" : param.password,
-            "user_name" : param.user_name
+            "user_name" : param.user_name,
+            "link_avatar": param.link_avatar,
+            "ip_register": param.ip_register,
+            "device_register": param.device_register
         ]
         AF.request(url ,method: .post, parameters: paramters).response { response in
             switch response.result {
@@ -31,7 +34,7 @@ class APIFetchManager {
                     let jsonData = try JSONDecoder().decode(RegisterModel.self, from: result)
                     handlerResponse(jsonData)
                 } catch {
-                    handlerError(error.localizedDescription)
+                    handlerError(self.handleError(data: result))
                 }
             case .failure(let error):
                 handlerError(error.localizedDescription)
@@ -44,8 +47,8 @@ class APIFetchManager {
                handlerError: @escaping(_ error: String) -> (Void)) {
         let url = "https://sakaivn.online/login"
         let param: Parameters = [
-            "email_or_username": "Demo123",
-            "password": "Aa123456@"
+            "email_or_username": param.email,
+            "password": param.password
         ]
         AF.request(url,
                    method: .post,
@@ -61,7 +64,7 @@ class APIFetchManager {
                     let jsonData = try JSONDecoder().decode(LoginModel.self, from: result)
                     handlerResponse(jsonData)
                 } catch {
-                    handlerError(error.localizedDescription)
+                    handlerError(self.handleError(data: result))
                 }
             case .failure(let error):
                 handlerError(error.localizedDescription)
@@ -73,7 +76,10 @@ class APIFetchManager {
                        handlerError: @escaping(_ error: String) -> (Void)) {
         let url = "https://sakaivn.online/reset"
         let param: Parameters = ["email": param.email]
-        AF.request(url , method: .post , parameters: param , encoding: URLEncoding.default).response { result in
+        AF.request(url ,
+                   method: .post,
+                   parameters: param,
+                   encoding: URLEncoding.default).response { result in
             switch result.result {
             case .success(let result):
                 guard let result = result else {
@@ -84,11 +90,24 @@ class APIFetchManager {
                     let jsonData = try JSONDecoder().decode(ResetPasswordModel.self, from: result)
                     handlerResponse(jsonData)
                 } catch {
-                    handlerError(error.localizedDescription)
+                    handlerError(self.handleError(data: result))
                 }
             case .failure(let error):
                 handlerError(error.localizedDescription)
             }
         }
     }
+    
+    private func handleError(data: Data) -> String {
+        do {
+            let jsonData = try JSONDecoder().decode(ErrorModel.self, from: data)
+            return jsonData.message
+        } catch {
+            return "Parser model error"
+        }
+    }
+}
+
+struct ErrorModel: Codable {
+    let message: String
 }

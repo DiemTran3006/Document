@@ -194,7 +194,7 @@ struct _R {
     var googleServiceInfoPlist: RswiftResources.FileResource { .init(name: "GoogleService-Info", pathExtension: "plist", bundle: bundle, locale: LocaleReference.none) }
   }
 
-  /// This `_R.nib` struct is generated, and contains static references to 21 nibs.
+  /// This `_R.nib` struct is generated, and contains static references to 22 nibs.
   struct nib {
     let bundle: Foundation.Bundle
 
@@ -233,6 +233,9 @@ struct _R {
 
     /// Nib `PopViewController`.
     var popViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "PopViewController", bundle: bundle) }
+
+    /// Nib `ProfileViewController`.
+    var profileViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "ProfileViewController", bundle: bundle) }
 
     /// Nib `PushNotificationViewController`.
     var pushNotificationViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "PushNotificationViewController", bundle: bundle) }

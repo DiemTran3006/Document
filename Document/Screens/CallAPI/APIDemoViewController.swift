@@ -8,7 +8,7 @@
 import UIKit
 
 
-class APIDemoViewController: UIViewController {
+class APIDemoViewController: BaseViewController {
     
     private let loginSocialManager = LoginSocialManager.shared
     
@@ -16,11 +16,12 @@ class APIDemoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.isNavigationBarHidden = true
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         loginSocialManager.delegate = self
         settingAttrLabel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     private func settingAttrLabel() {
@@ -55,8 +56,7 @@ class APIDemoViewController: UIViewController {
     }
     
     @IBAction func actionPopMenu(_ sender: Any) {
-        let VC = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        self.navigationController?.pushViewController( VC, animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func actionLogin(_ sender: Any) {

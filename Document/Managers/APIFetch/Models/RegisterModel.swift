@@ -6,11 +6,14 @@
 //
 
 import Foundation
-// MARK: - RegisterAPI
+
 struct RegisterRequest {
     let email: String
     let password: String
     let user_name: String
+    let ip_register: String
+    let device_register: String
+    let link_avatar: String
 }
 struct RegisterModel: Codable {
     let message : String
