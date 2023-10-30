@@ -12,6 +12,7 @@ target 'Document' do
   # Network
   pod 'AlamofireImage', '~> 4.1'
   pod 'Cosmos', '~> 23.0'
+  pod 'Toast-Swift'
 
   pod 'FirebaseAnalytics'
   pod 'FirebaseAuth'
@@ -23,7 +24,10 @@ target 'Document' do
   pod 'Firebase/Storage'
   pod 'R.swift'
 
-
+  pod 'MaterialComponents/TextControls+FilledTextAreas'
+  pod 'MaterialComponents/TextControls+FilledTextFields'
+  pod 'MaterialComponents/TextControls+OutlinedTextAreas'
+  pod 'MaterialComponents/TextControls+OutlinedTextFields'
 end
 
 

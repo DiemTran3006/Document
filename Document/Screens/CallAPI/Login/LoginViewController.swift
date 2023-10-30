@@ -6,29 +6,46 @@
 //
 
 import UIKit
+import Toast_Swift
+import MaterialComponents
 
 class LoginViewController: UIViewController {
     
     var email = ""
     var password = ""
     
-    @IBOutlet weak var emailTextfield: UITextField!
-    @IBOutlet weak var viewEmailTextfield: UIView!
-    @IBOutlet weak var passwordTextfield: UITextField!
-    @IBOutlet weak var viewPasswordTextfield: UIView!
-    
+    @IBOutlet weak var emailTextfield: MDCOutlinedTextField!
+    @IBOutlet weak var passwordTextfield: MDCOutlinedTextField!
+
+        
     @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = Menu.callAPI.title
         emailTextfield.text = email
         passwordTextfield.text = password
         checkValidate()
         propertiesTextfiled()
         hideKeyboardWhenTappedAround()
         self.navigationController?.isNavigationBarHidden = true
+        customTextField()
+    }
+    
+    func customTextField() {
+        emailTextfield.label.text = "Email"
+        emailTextfield.containerRadius = 10
+        emailTextfield.setOutlineColor(.init(hexString: "8E7F7F"), for: .normal)
+        emailTextfield.setOutlineColor(.init(hexString: "8E7F7F"), for: .editing)
+        emailTextfield.sizeToFit()
+        
+        passwordTextfield.label.text = "Password"
+        passwordTextfield.containerRadius = 10
+        passwordTextfield.setOutlineColor(.init(hexString: "8E7F7F"), for: .normal)
+        passwordTextfield.setOutlineColor(.init(hexString: "8E7F7F"), for: .editing)
+        passwordTextfield.sizeToFit()
     }
 
-    @IBAction func changeEmailTextfield(_ sender: Any) {
+    @IBAction func changeEmaialTextfield(_ sender: Any) {
         checkValidate()
     }
     
@@ -36,7 +53,15 @@ class LoginViewController: UIViewController {
         checkValidate()
     }
     
-    @IBAction func actionSignIn(_ sender: Any) {
+    @IBAction func actionLogin(_ sender: Any) {
+        let param: LoginRequest = LoginRequest(email: emailTextfield.text!,
+                                               password: passwordTextfield.text!)
+        APIFetchManager.shared.login(param: param) { apiData in
+            print(apiData)
+        } handlerError: { error in
+            print(error)
+        }
+
     }
    private func checkValidate() {
        
@@ -44,15 +69,20 @@ class LoginViewController: UIViewController {
         let email = emailTextfield.text.asStringOrEmpty()
         
         if  email.isValidEmail || email.isEmpty {
-            viewEmailTextfield.layer.borderColor = UIColor(hexString: "#8E7F7F").cgColor
+            emailTextfield.setOutlineColor(.init(hexString: "8E7F7F"), for: .normal)
+            emailTextfield.setOutlineColor(.init(hexString: "8E7F7F"), for: .editing)
         } else {
-            viewEmailTextfield.layer.borderColor = UIColor(hexString: "#DA1414").cgColor
+            emailTextfield.setOutlineColor(.init(hexString: "DA1414"), for: .normal)
+            emailTextfield.setOutlineColor(.init(hexString: "DA1414"), for: .editing)
+
         }
         
        if  password.isValidPassword || password.isEmpty {
-           viewPasswordTextfield.layer.borderColor = UIColor(hexString: "#8E7F7F").cgColor
+           passwordTextfield.setOutlineColor(.init(hexString: "8E7F7F"), for: .normal)
+           passwordTextfield.setOutlineColor(.init(hexString: "8E7F7F"), for: .editing)
        } else {
-           viewPasswordTextfield.layer.borderColor = UIColor(hexString: "#DA1414").cgColor
+           passwordTextfield.setOutlineColor(.init(hexString: "DA1414"), for: .normal)
+           passwordTextfield.setOutlineColor(.init(hexString: "DA1414"), for: .editing)
        }
       
         if email.isValidEmail && password.isValidPassword {
@@ -64,20 +94,24 @@ class LoginViewController: UIViewController {
         }
     }
     private func propertiesTextfiled() {
-        emailTextfield.addPadding(.left(15))
-        passwordTextfield.addPadding(.left(15))
         passwordTextfield.enablePasswordToggle()
     }
     
     @IBAction func actionPop(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        let VC = APIDemoViewController(nibName: "APIDemoViewController", bundle: nil)
+        self.navigationController?.pushViewController( VC, animated: true)
     }
     
     @IBAction func pushFogotPassword(_ sender: Any) {
+        let VC = ForgotPasswordViewController(nibName: "ForgotPasswordViewController", bundle: nil)
+        self.navigationController?.pushViewController( VC, animated: true)
     }
     
     @IBAction func actionPushSignUpButton(_ sender: Any) {
         let VC = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
         self.navigationController?.pushViewController( VC, animated: true)
     }
+}
+extension LoginViewController: UITextFieldDelegate {
+
 }

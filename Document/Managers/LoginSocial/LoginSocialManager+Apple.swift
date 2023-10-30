@@ -1,20 +1,20 @@
 //
-//  LoginSocial+Apple.swift
+//  LoginSocialManager+Apple.swift
 //  Document
 //
 //  Created by Diem Tran on 25/10/2023.
 //
 
-import Foundation
+import UIKit
 import CryptoKit
 import CommonCrypto
 import FirebaseAuth
 import FirebaseCore
 import AuthenticationServices
 
-extension LoginSocialViewController  {
+extension LoginSocialManager  {
     
-    public func startSignInWithAppleFlow() {
+    public func startSignInWithAppleFlow(view: UIViewController) {
         let nonce = randomNonceString()
         currentNonce = nonce
         let appleIDProvider = ASAuthorizationAppleIDProvider()
@@ -61,8 +61,8 @@ extension LoginSocialViewController  {
     }
 }
 
-extension LoginSocialViewController: ASAuthorizationControllerDelegate,
-                                     ASAuthorizationControllerPresentationContextProviding {
+extension LoginSocialManager: ASAuthorizationControllerDelegate,
+                              ASAuthorizationControllerPresentationContextProviding {
     
     func authorizationController(controller: ASAuthorizationController,
                                  didCompleteWithAuthorization authorization: ASAuthorization) {
@@ -82,18 +82,7 @@ extension LoginSocialViewController: ASAuthorizationControllerDelegate,
             let credential = OAuthProvider.appleCredential(withIDToken: idTokenString,
                                                            rawNonce: nonce,
                                                            fullName: appleIDCredential.fullName)
-            print(idTokenString)
-            // Đăng nhập bằng Firebase.
-            Auth.auth().signIn(with: credential) { (authResult, error) in
-                guard error == nil else {
-                    return
-                }
-                
-                let displayName = authResult?.user.displayName ?? ""
-                let email = authResult?.user.email ?? ""
-                let photoURL = authResult?.user.photoURL?.absoluteString ?? ""
-                self.setUser(name: displayName, email: email, avatarUrl: photoURL)
-            }
+            authenticateWithFirebase(credential: credential, loginType: .APPLE)
         }
     }
     

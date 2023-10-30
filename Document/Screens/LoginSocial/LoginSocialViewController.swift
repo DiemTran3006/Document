@@ -7,19 +7,12 @@
 
 import UIKit
 import Foundation
-import FirebaseAuth
-import FirebaseCore
-import FBSDKCoreKit
-import FBSDKLoginKit
 import AlamofireImage
 import AuthenticationServices
 
-protocol LoginSocialProtocol: AnyObject {
-}
-
 class LoginSocialViewController: UIViewController {
     
-    var currentNonce: String?
+    private let loginSocialManager = LoginSocialManager.shared
     
     @IBOutlet weak var avatarView: UIImageView!
     @IBOutlet weak var emailLabel: UILabel!
@@ -27,29 +20,39 @@ class LoginSocialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = Menu.loginSocial.title
-        setUser(name: "", email: "", avatarUrl: "")
-    }
-    
-    public func setUser(name: String,
-                         email: String,
-                         avatarUrl: String) {
-        nameLabel.text = name
-        emailLabel.text = email
-        if let url = URL(string: avatarUrl) {
-            avatarView.af.setImage(withURL: url)
-        }
+        loginSocialManager.delegate = self
+        setUser(user: .init(name: nil, email: nil, photoUrl: nil, loginType: .APPLE))
     }
     
     @IBAction func loginFacebookAction(_ sender: Any) {
-        startSignInWithFacebookFlow()
+        loginSocialManager.startSignInWithFacebookFlow(view: self)
     }
     
     @IBAction func loginGoogleAction(_ sender: Any) {
-        startSignInWithGoogleFlow()
+        loginSocialManager.startSignInWithGoogleFlow(view: self)
     }
     
     @IBAction func loginAppleAction(_ sender: Any) {
-        startSignInWithAppleFlow()
+        loginSocialManager.startSignInWithAppleFlow(view: self)
+    }
+    
+    private func setUser(user: LoginSocialResponse) {
+        nameLabel.text = user.name
+        emailLabel.text = user.email
+        if let urlString = user.photoUrl, let url = URL(string: urlString) {
+            avatarView.af.setImage(withURL: url)
+        }
+    }
+}
+
+extension LoginSocialViewController: LoginSocialProtocol {
+    func loginSocialFailure(error: String) {
+        print("error: \(error)")
+    }
+    
+    func loginSocialSuccessfully(response: LoginSocialResponse) {
+        setUser(user: response)
     }
 }
