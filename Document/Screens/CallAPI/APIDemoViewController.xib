@@ -259,7 +259,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="loginZalo:" destination="-1" eventType="touchUpInside" id="IXH-SS-7bp"/>
+                                        <action selector="loginZalo:" destination="-1" eventType="touchUpInside" id="wVP-tT-Uh7"/>
                                     </connections>
                                 </button>
                             </subviews>

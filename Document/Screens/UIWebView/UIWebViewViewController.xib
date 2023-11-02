@@ -21,8 +21,41 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hP2-x1-Jx5">
+                    <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGp-2S-8WD">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="F56-lK-Ofu"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="icon.pop"/>
+                            <connections>
+                                <action selector="actionPopMenu:" destination="-1" eventType="touchUpInside" id="UaB-mu-PH4"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIWebView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtu-WZ-LSQ">
+                            <rect key="frame" x="40" y="0.0" width="313" height="40"/>
+                            <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="xtu-WZ-LSQ" firstAttribute="centerX" secondItem="hP2-x1-Jx5" secondAttribute="centerX" id="6TN-ju-Qq0"/>
+                        <constraint firstItem="xtu-WZ-LSQ" firstAttribute="leading" secondItem="jGp-2S-8WD" secondAttribute="trailing" id="9Zg-eP-Mag"/>
+                        <constraint firstAttribute="bottom" secondItem="xtu-WZ-LSQ" secondAttribute="bottom" id="DQb-59-Ghh"/>
+                        <constraint firstItem="xtu-WZ-LSQ" firstAttribute="top" secondItem="hP2-x1-Jx5" secondAttribute="top" id="WVR-S6-LwN"/>
+                        <constraint firstAttribute="bottom" secondItem="jGp-2S-8WD" secondAttribute="bottom" id="Xfm-NB-Jih"/>
+                        <constraint firstAttribute="height" constant="40" id="iaz-fP-hRH"/>
+                        <constraint firstItem="jGp-2S-8WD" firstAttribute="leading" secondItem="hP2-x1-Jx5" secondAttribute="leading" id="qrt-ah-KT3"/>
+                        <constraint firstItem="jGp-2S-8WD" firstAttribute="top" secondItem="hP2-x1-Jx5" secondAttribute="top" id="sGW-Ja-DJf"/>
+                    </constraints>
+                </view>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0Lz-73-thW">
-                    <rect key="frame" x="10" y="59" width="373" height="45"/>
+                    <rect key="frame" x="10" y="99" width="373" height="45"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="az8-PS-Q2D">
                             <rect key="frame" x="0.0" y="0.0" width="75" height="45"/>
@@ -164,7 +197,7 @@
                     </userDefinedRuntimeAttributes>
                 </stackView>
                 <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uri-XF-DHh">
-                    <rect key="frame" x="0.0" y="109" width="393" height="709"/>
+                    <rect key="frame" x="0.0" y="149" width="393" height="669"/>
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <wkWebViewConfiguration key="configuration">
                         <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -172,7 +205,7 @@
                     </wkWebViewConfiguration>
                 </wkWebView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-AL-PSa">
-                    <rect key="frame" x="178" y="445" width="37" height="37"/>
+                    <rect key="frame" x="178" y="465" width="37" height="37"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
@@ -180,15 +213,18 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hP2-x1-Jx5" secondAttribute="trailing" id="2Bc-n9-adi"/>
                 <constraint firstItem="0Lz-73-thW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="LBo-NU-iMB"/>
+                <constraint firstItem="hP2-x1-Jx5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="PTc-Uf-JdD"/>
                 <constraint firstItem="Uri-XF-DHh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Tvp-Wf-oY6"/>
-                <constraint firstItem="0Lz-73-thW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="UhR-e6-q0h"/>
                 <constraint firstItem="Uri-XF-DHh" firstAttribute="top" secondItem="0Lz-73-thW" secondAttribute="bottom" constant="5" id="Ydh-0Y-TqQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uri-XF-DHh" secondAttribute="trailing" id="fkE-iy-YYY"/>
                 <constraint firstItem="xUd-AL-PSa" firstAttribute="centerY" secondItem="Uri-XF-DHh" secondAttribute="centerY" id="gat-GW-bHu"/>
                 <constraint firstItem="xUd-AL-PSa" firstAttribute="centerX" secondItem="Uri-XF-DHh" secondAttribute="centerX" id="lom-oX-hV1"/>
+                <constraint firstItem="0Lz-73-thW" firstAttribute="top" secondItem="hP2-x1-Jx5" secondAttribute="bottom" id="vLx-Cz-Asv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Uri-XF-DHh" secondAttribute="bottom" id="wBJ-zD-hd9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Lz-73-thW" secondAttribute="trailing" constant="10" id="ygz-7w-V4u"/>
+                <constraint firstItem="hP2-x1-Jx5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zWs-JU-ieg"/>
             </constraints>
             <point key="canvasLocation" x="119.84732824427481" y="19.718309859154932"/>
         </view>
@@ -196,6 +232,7 @@
     <resources>
         <image name="back.left" width="25" height="25"/>
         <image name="back.right" width="25" height="25"/>
+        <image name="icon.pop" width="24" height="24"/>
         <image name="icons8-reload" width="25" height="25"/>
         <image name="search" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">

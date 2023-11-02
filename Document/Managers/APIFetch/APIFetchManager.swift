@@ -10,7 +10,7 @@ import Alamofire
 
 class APIFetchManager {
     static let shared = APIFetchManager()
-    
+    // MARK: - Api đăng kí
     func register(param: RegisterRequest,
                   handlerResponse: @escaping(_ apiData: RegisterModel) -> (Void),
                   handlerError: @escaping(_ error: String) -> (Void)) {
@@ -42,6 +42,7 @@ class APIFetchManager {
         }
     }
     
+    // MARK: - API đăng nhập
     func login(param: LoginRequest,
                handlerResponse: @escaping(_ apiData: LoginModel) -> (Void),
                handlerError: @escaping(_ error: String) -> (Void)) {
@@ -71,6 +72,8 @@ class APIFetchManager {
             }
         }
     }
+    
+    // MARK: - resetPassword
     func resetPassword(param: ResetPassworResquest,
                        handlerResponse: @escaping(_ apiData: ResetPasswordModel) -> (Void),
                        handlerError: @escaping(_ error: String) -> (Void)) {
@@ -97,7 +100,49 @@ class APIFetchManager {
             }
         }
     }
-    
+    // MARK: - upLoadImage
+    func upLoadImage(param: UploadImageReques,
+                     handlerResponse: @escaping(_ apiData: UploadImageModel) -> (Void),
+                     handlerError: @escaping(_ error: String) -> (Void)) {
+        let url = "https://api.imgbb.com/1/upload"
+        let timestamp = Date().timeIntervalSince1970
+        let parameters = ["key": param.key]
+        guard let host = URLComponents(string: url) else {
+            return
+        }
+        AF.upload(multipartFormData: { multipart in
+            multipart.append(param.image,
+                             withName: "image",
+                             fileName: "\(timestamp)/image.jpg",
+                             mimeType: "image/jpeg")
+            for (key, value) in parameters {
+                multipart.append(value.data(using: .utf8) ?? Data(), withName: key)
+            }
+        }, to: host,
+                  usingThreshold: UInt64(),
+                  method: .post)
+        .uploadProgress(queue: .main, closure: { progress in
+            print("Upload Progress: \(progress.fractionCompleted)")})
+        .response { result in
+            switch result.result {
+            case .success(let result):
+                guard let result = result else {
+                    handlerError("No Data")
+                    return
+                }
+                do {
+                    let jsonData = try JSONDecoder().decode(UploadImageModel.self, from: result)
+                    handlerResponse(jsonData)
+                    print(jsonData)
+                } catch {
+                    handlerError(self.handleError(data: result))
+                }
+            case .failure(let error):
+                handlerError(error.localizedDescription)
+            }
+        }
+    }
+    // MARK: - Xử lý lỗi
     private func handleError(data: Data) -> String {
         do {
             let jsonData = try JSONDecoder().decode(ErrorModel.self, from: data)
@@ -111,3 +156,4 @@ class APIFetchManager {
 struct ErrorModel: Codable {
     let message: String
 }
+

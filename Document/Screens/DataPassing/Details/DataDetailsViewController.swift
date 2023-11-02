@@ -32,6 +32,9 @@ class DataDetailsViewController: UIViewController {
         super.viewWillDisappear(animated)
        
     }
+    @IBAction func actionPop(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func transmittedDataButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

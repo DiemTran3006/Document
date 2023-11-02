@@ -48,11 +48,13 @@ class APIDemoViewController: BaseViewController {
         loginSocialManager.startSignInWithAppleFlow(view: self)
     }
     
+
     @IBAction func LoginInstagram(_ sender: Any) {
         
     }
     
     @IBAction func loginZalo(_ sender: Any) {
+        loginSocialManager.startSignInWithZaloFlow(view: self)
     }
     
     @IBAction func actionPopMenu(_ sender: Any) {

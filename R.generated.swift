@@ -63,9 +63,12 @@ struct _R {
     var textButton: RswiftResources.ColorResource { .init(name: "textButton", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 19 images.
+  /// This `_R.image` struct is generated, and contains static references to 22 images.
   struct image {
     let bundle: Foundation.Bundle
+
+    /// Image `Group 6477`.
+    var group6477: RswiftResources.ImageResource { .init(name: "Group 6477", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `Profile image`.
     var profileImage: RswiftResources.ImageResource { .init(name: "Profile image", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -123,6 +126,12 @@ struct _R {
 
     /// Image `search`.
     var search: RswiftResources.ImageResource { .init(name: "search", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `united-kingdom`.
+    var unitedKingdom: RswiftResources.ImageResource { .init(name: "united-kingdom", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `user`.
+    var user: RswiftResources.ImageResource { .init(name: "user", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
   /// This `_R.info` struct is generated, and contains static references to 1 properties.
@@ -194,7 +203,7 @@ struct _R {
     var googleServiceInfoPlist: RswiftResources.FileResource { .init(name: "GoogleService-Info", pathExtension: "plist", bundle: bundle, locale: LocaleReference.none) }
   }
 
-  /// This `_R.nib` struct is generated, and contains static references to 22 nibs.
+  /// This `_R.nib` struct is generated, and contains static references to 28 nibs.
   struct nib {
     let bundle: Foundation.Bundle
 
@@ -219,6 +228,9 @@ struct _R {
     /// Nib `ForgotPasswordViewController`.
     var forgotPasswordViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "ForgotPasswordViewController", bundle: bundle) }
 
+    /// Nib `HomeAPIViewController`.
+    var homeAPIViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "HomeAPIViewController", bundle: bundle) }
+
     /// Nib `HomeViewController`.
     var homeViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "HomeViewController", bundle: bundle) }
 
@@ -231,11 +243,14 @@ struct _R {
     /// Nib `MenuTableViewCell`.
     var menuTableViewCell: RswiftResources.NibReference<MenuTableViewCell> { .init(name: "MenuTableViewCell", bundle: bundle) }
 
+    /// Nib `PhoneCollectionViewCell`.
+    var phoneCollectionViewCell: RswiftResources.NibReference<PhoneCollectionViewCell> { .init(name: "PhoneCollectionViewCell", bundle: bundle) }
+
+    /// Nib `PhoneTableViewCell`.
+    var phoneTableViewCell: RswiftResources.NibReference<PhoneTableViewCell> { .init(name: "PhoneTableViewCell", bundle: bundle) }
+
     /// Nib `PopViewController`.
     var popViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "PopViewController", bundle: bundle) }
-
-    /// Nib `ProfileViewController`.
-    var profileViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "ProfileViewController", bundle: bundle) }
 
     /// Nib `PushNotificationViewController`.
     var pushNotificationViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "PushNotificationViewController", bundle: bundle) }
@@ -246,11 +261,23 @@ struct _R {
     /// Nib `RegisterViewController`.
     var registerViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "RegisterViewController", bundle: bundle) }
 
+    /// Nib `SampleCollectionViewCell`.
+    var sampleCollectionViewCell: RswiftResources.NibReference<SampleCollectionViewCell> { .init(name: "SampleCollectionViewCell", bundle: bundle) }
+
+    /// Nib `SampleTableViewCell`.
+    var sampleTableViewCell: RswiftResources.NibReference<SampleTableViewCell> { .init(name: "SampleTableViewCell", bundle: bundle) }
+
     /// Nib `TableViewCell`.
     var tableViewCell: RswiftResources.NibReference<TableViewCell> { .init(name: "TableViewCell", bundle: bundle) }
 
     /// Nib `TableViewController`.
     var tableViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "TableViewController", bundle: bundle) }
+
+    /// Nib `TypePhoneCollectionViewCell`.
+    var typePhoneCollectionViewCell: RswiftResources.NibReference<TypePhoneCollectionViewCell> { .init(name: "TypePhoneCollectionViewCell", bundle: bundle) }
+
+    /// Nib `TypePhoneTableViewCell`.
+    var typePhoneTableViewCell: RswiftResources.NibReference<TypePhoneTableViewCell> { .init(name: "TypePhoneTableViewCell", bundle: bundle) }
 
     /// Nib `UIAlertViewController`.
     var uiAlertViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "UIAlertViewController", bundle: bundle) }
@@ -272,21 +299,37 @@ struct _R {
       if UIKit.UIImage(named: "icon_zalo", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon_zalo' is used in nib 'APIDemoViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "icons8_apple", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icons8_apple' is used in nib 'APIDemoViewController', but couldn't be loaded.") }
       if UIKit.UIColor(named: "textButton", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'textButton' is used in nib 'APIDemoViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'CollectionViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'DataDetailsViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'DataPassingViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'FirebaseStorageViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'ForgotPasswordViewController', but couldn't be loaded.") }
       if UIKit.UIColor(named: "textButton", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'textButton' is used in nib 'ForgotPasswordViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "Group 6477", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'Group 6477' is used in nib 'HomeAPIViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "united-kingdom", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'united-kingdom' is used in nib 'HomeAPIViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "user", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'user' is used in nib 'HomeAPIViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'LoginSocialViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "icon_facebook", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon_facebook' is used in nib 'LoginSocialViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "icon_google", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon_google' is used in nib 'LoginSocialViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "icons8_apple", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icons8_apple' is used in nib 'LoginSocialViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'LoginViewController', but couldn't be loaded.") }
       if UIKit.UIColor(named: "textButton", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'textButton' is used in nib 'LoginViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'PopViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'PushNotificationViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'PushViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "Profile image", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'Profile image' is used in nib 'RegisterViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'RegisterViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "icon_camera", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon_camera' is used in nib 'RegisterViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "Vector (2)", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'Vector (2)' is used in nib 'TableViewCell', but couldn't be loaded.") }
       if UIKit.UIImage(named: "Vector (3)", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'Vector (3)' is used in nib 'TableViewCell', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'TableViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'UIAlertViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'UIDatePickerViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "image.birthday", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'image.birthday' is used in nib 'UIDatePickerViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'UITimePickerViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "back.left", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'back.left' is used in nib 'UIWebViewViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "back.right", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'back.right' is used in nib 'UIWebViewViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "icon.pop", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icon.pop' is used in nib 'UIWebViewViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "icons8-reload", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'icons8-reload' is used in nib 'UIWebViewViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "search", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'search' is used in nib 'UIWebViewViewController', but couldn't be loaded.") }
     }

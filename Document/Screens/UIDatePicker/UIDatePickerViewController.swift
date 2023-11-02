@@ -17,10 +17,13 @@ class UIDatePickerViewController: UIViewController {
         super.viewDidLoad()
       
         creaateDatapicker()
-        title = Menu.UIDatePicker.title
+
     }
 
-
+    @IBAction func actionPopMenu(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func createToolbar() -> UIToolbar {
         
         let toolbar = UIToolbar()

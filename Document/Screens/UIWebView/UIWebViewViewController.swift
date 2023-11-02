@@ -23,6 +23,10 @@ class UIWebViewViewController: UIViewController {
         hideKeyboardWhenTappedAround()
     }
     
+    @IBAction func actionPopMenu(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func popWebViewButton(_ sender: Any) {
         if History.count > 0 {
             vitri = vitri - 1

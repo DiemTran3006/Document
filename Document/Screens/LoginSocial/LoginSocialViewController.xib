@@ -21,6 +21,63 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxZ-Eg-5F1">
+                    <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5a-EE-IfA">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="bot-YG-Yq7"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="icon.pop"/>
+                            <connections>
+                                <action selector="actionPopMenu:" destination="-1" eventType="touchUpInside" id="w8d-x8-cTE"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LoginSocial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkw-WZ-HlD">
+                            <rect key="frame" x="40" y="0.0" width="313" height="40"/>
+                            <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="m5a-EE-IfA" firstAttribute="leading" secondItem="fxZ-Eg-5F1" secondAttribute="leading" id="GeO-oz-Cwa"/>
+                        <constraint firstItem="wkw-WZ-HlD" firstAttribute="centerX" secondItem="fxZ-Eg-5F1" secondAttribute="centerX" id="Jsq-1q-WIl"/>
+                        <constraint firstItem="m5a-EE-IfA" firstAttribute="top" secondItem="fxZ-Eg-5F1" secondAttribute="top" id="M6q-zz-xrk"/>
+                        <constraint firstAttribute="height" constant="40" id="NmP-a6-P0I"/>
+                        <constraint firstItem="wkw-WZ-HlD" firstAttribute="top" secondItem="fxZ-Eg-5F1" secondAttribute="top" id="VFT-7k-EbP"/>
+                        <constraint firstAttribute="bottom" secondItem="wkw-WZ-HlD" secondAttribute="bottom" id="gTp-xP-VuQ"/>
+                        <constraint firstItem="wkw-WZ-HlD" firstAttribute="leading" secondItem="m5a-EE-IfA" secondAttribute="trailing" id="maj-eg-lWU"/>
+                        <constraint firstAttribute="bottom" secondItem="m5a-EE-IfA" secondAttribute="bottom" id="p6V-QK-i9B"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pry-R2-Azw">
+                    <rect key="frame" x="156.66666666666666" y="129" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="68H-vG-WA0"/>
+                        <constraint firstAttribute="height" constant="80" id="aG6-z5-K8j"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="tr_cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvw-ab-Oba">
+                    <rect key="frame" x="24" y="217" width="345" height="20.666666666666657"/>
+                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bae-6i-yhj">
+                    <rect key="frame" x="24" y="245.66666666666666" width="345" height="20.666666666666657"/>
+                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="R8d-2j-Rpv">
                     <rect key="frame" x="50" y="341" width="293" height="195"/>
                     <subviews>
@@ -83,30 +140,6 @@
                         </button>
                     </subviews>
                 </stackView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pry-R2-Azw">
-                    <rect key="frame" x="156.66666666666666" y="83" width="80" height="80"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="80" id="68H-vG-WA0"/>
-                        <constraint firstAttribute="height" constant="80" id="aG6-z5-K8j"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="tr_cornerRadius">
-                            <real key="value" value="25"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvw-ab-Oba">
-                    <rect key="frame" x="24" y="171" width="345" height="20.666666666666657"/>
-                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="18"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bae-6i-yhj">
-                    <rect key="frame" x="24" y="199.66666666666666" width="345" height="20.666666666666657"/>
-                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="18"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -115,11 +148,14 @@
                 <constraint firstItem="Bae-6i-yhj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="B8A-31-TBD"/>
                 <constraint firstItem="rvw-ab-Oba" firstAttribute="top" secondItem="Pry-R2-Azw" secondAttribute="bottom" constant="8" id="E9L-7B-1Pk"/>
                 <constraint firstItem="Bae-6i-yhj" firstAttribute="top" secondItem="rvw-ab-Oba" secondAttribute="bottom" constant="8" id="Hte-Yj-pgI"/>
+                <constraint firstItem="fxZ-Eg-5F1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="I1K-b3-qpb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bae-6i-yhj" secondAttribute="trailing" constant="24" id="LPD-WJ-Hpw"/>
+                <constraint firstItem="Pry-R2-Azw" firstAttribute="top" secondItem="fxZ-Eg-5F1" secondAttribute="bottom" constant="30" id="XYw-Pr-r2J"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fxZ-Eg-5F1" secondAttribute="trailing" id="bY7-pn-Wr7"/>
                 <constraint firstItem="rvw-ab-Oba" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="kfR-wq-niw"/>
+                <constraint firstItem="fxZ-Eg-5F1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="m3T-it-0lD"/>
                 <constraint firstItem="R8d-2j-Rpv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="mQn-Js-qmM"/>
                 <constraint firstItem="R8d-2j-Rpv" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="maJ-rk-Vxl"/>
-                <constraint firstItem="Pry-R2-Azw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="muO-9k-MD4"/>
                 <constraint firstItem="Pry-R2-Azw" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="p3c-Nf-oZK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rvw-ab-Oba" secondAttribute="trailing" constant="24" id="ykA-VV-aVV"/>
             </constraints>
@@ -127,6 +163,7 @@
         </view>
     </objects>
     <resources>
+        <image name="icon.pop" width="24" height="24"/>
         <image name="icon_facebook" width="20" height="20"/>
         <image name="icon_google" width="20" height="20"/>
         <image name="icons8_apple" width="25" height="25"/>

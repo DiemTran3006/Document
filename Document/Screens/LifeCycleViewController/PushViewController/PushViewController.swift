@@ -9,10 +9,14 @@ import UIKit
 
 class PushViewController: UIViewController {
 
+
+    @IBAction func actionPopMenu(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = Menu.lifeCycleViewController.title
         print("LifeCycleViewController : View DidLoad")
     }
     override func viewDidLayoutSubviews() {

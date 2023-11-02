@@ -23,6 +23,7 @@ target 'Document' do
   pod 'Firebase/Messaging'
   pod 'Firebase/Storage'
   pod 'R.swift'
+  pod 'ZaloSDK'
 
   pod 'MaterialComponents/TextControls+FilledTextAreas'
   pod 'MaterialComponents/TextControls+FilledTextFields'

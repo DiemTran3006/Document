@@ -62,6 +62,10 @@ class TableViewController: UIViewController {
         title = Menu.tableView.title
         configTableView()
     }
+    
+    @IBAction func actionPopMenu(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     private func configTableView() {
         myTableView.separatorStyle = .none
         myTableView.dataSource = self

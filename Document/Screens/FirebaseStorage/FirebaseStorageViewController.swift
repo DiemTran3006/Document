@@ -19,7 +19,6 @@ class FirebaseStorageViewController: UIViewController, UINavigationControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = Menu.firebaseStorage.title
     }
     
     @IBAction func actionPickImage(_ sender: Any) {
@@ -95,6 +94,9 @@ class FirebaseStorageViewController: UIViewController, UINavigationControllerDel
         
     }
     
+    @IBAction func actionPopMenu(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func actionDowloadImage(_ sender: Any) {
         //  Tạo reference đến thư mục
         let reference = Storage.storage().reference(withPath: "Images")

@@ -18,11 +18,44 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBe-Ra-I06">
+                    <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGI-SG-DUs">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="qtC-CJ-HcS"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="icon.pop"/>
+                            <connections>
+                                <action selector="actionPopMenu:" destination="-1" eventType="touchUpInside" id="cE1-Kx-K1g"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life Cycle ViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23w-Rq-HhO">
+                            <rect key="frame" x="40" y="0.0" width="313" height="40"/>
+                            <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="23w-Rq-HhO" firstAttribute="centerX" secondItem="eBe-Ra-I06" secondAttribute="centerX" id="G8n-xq-Mex"/>
+                        <constraint firstItem="23w-Rq-HhO" firstAttribute="leading" secondItem="YGI-SG-DUs" secondAttribute="trailing" id="MEw-re-onN"/>
+                        <constraint firstAttribute="height" constant="40" id="NFr-UW-Caa"/>
+                        <constraint firstItem="YGI-SG-DUs" firstAttribute="top" secondItem="eBe-Ra-I06" secondAttribute="top" id="gjQ-ZE-4y2"/>
+                        <constraint firstAttribute="bottom" secondItem="23w-Rq-HhO" secondAttribute="bottom" id="m2A-3X-QgR"/>
+                        <constraint firstAttribute="bottom" secondItem="YGI-SG-DUs" secondAttribute="bottom" id="mFV-dO-Frj"/>
+                        <constraint firstItem="23w-Rq-HhO" firstAttribute="top" secondItem="eBe-Ra-I06" secondAttribute="top" id="oqw-Ex-6l8"/>
+                        <constraint firstItem="YGI-SG-DUs" firstAttribute="leading" secondItem="eBe-Ra-I06" secondAttribute="leading" id="uCS-mL-rXZ"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="quA-na-5Rk" userLabel="ContainerView">
-                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <rect key="frame" x="0.0" y="99" width="393" height="753"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iaq-27-VC8">
-                            <rect key="frame" x="46.666666666666657" y="371.66666666666669" width="300" height="50"/>
+                            <rect key="frame" x="46.666666666666657" y="351.66666666666669" width="300" height="50"/>
                             <color key="backgroundColor" red="0.23529411759999999" green="0.36862745099999999" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="300" id="Frm-6o-N1Y"/>
@@ -55,13 +88,17 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="quA-na-5Rk" secondAttribute="trailing" id="IaU-2J-EIx"/>
                 <constraint firstAttribute="bottom" secondItem="quA-na-5Rk" secondAttribute="bottom" id="OV5-S3-eoA"/>
+                <constraint firstItem="eBe-Ra-I06" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZOo-wU-WlV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eBe-Ra-I06" secondAttribute="trailing" id="cho-in-pLN"/>
+                <constraint firstItem="eBe-Ra-I06" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="d2N-ts-OJ4"/>
+                <constraint firstItem="quA-na-5Rk" firstAttribute="top" secondItem="eBe-Ra-I06" secondAttribute="bottom" id="oqA-4n-tod"/>
                 <constraint firstItem="quA-na-5Rk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tHh-8X-ch4"/>
-                <constraint firstItem="quA-na-5Rk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ww4-8w-UIY"/>
             </constraints>
-            <point key="canvasLocation" x="21" y="20"/>
+            <point key="canvasLocation" x="20.610687022900763" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="icon.pop" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -19,14 +19,47 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VLh-4u-hum">
+                    <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSX-P9-oxe">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="ejI-0W-rvc"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="icon.pop"/>
+                            <connections>
+                                <action selector="actionPopMenu:" destination="-1" eventType="touchUpInside" id="vaH-6V-KyR"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UITimePicker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mf-ze-Tvb">
+                            <rect key="frame" x="40" y="0.0" width="313" height="40"/>
+                            <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="4Mf-ze-Tvb" firstAttribute="top" secondItem="VLh-4u-hum" secondAttribute="top" id="7tR-RH-RXc"/>
+                        <constraint firstItem="4Mf-ze-Tvb" firstAttribute="centerX" secondItem="VLh-4u-hum" secondAttribute="centerX" id="Akx-cS-Nvp"/>
+                        <constraint firstAttribute="bottom" secondItem="vSX-P9-oxe" secondAttribute="bottom" id="N3f-P2-XIR"/>
+                        <constraint firstItem="vSX-P9-oxe" firstAttribute="leading" secondItem="VLh-4u-hum" secondAttribute="leading" id="PEh-kb-bQk"/>
+                        <constraint firstAttribute="bottom" secondItem="4Mf-ze-Tvb" secondAttribute="bottom" id="XK7-DK-mlH"/>
+                        <constraint firstItem="vSX-P9-oxe" firstAttribute="top" secondItem="VLh-4u-hum" secondAttribute="top" id="nQS-ee-IUf"/>
+                        <constraint firstItem="4Mf-ze-Tvb" firstAttribute="leading" secondItem="vSX-P9-oxe" secondAttribute="trailing" id="shu-uq-4Ml"/>
+                        <constraint firstAttribute="height" constant="40" id="zAT-p4-abX"/>
+                    </constraints>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TimePicker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7l-xe-pU8">
-                    <rect key="frame" x="20" y="109" width="353" height="24.666666666666657"/>
+                    <rect key="frame" x="20" y="159" width="353" height="24.666666666666657"/>
                     <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyr-2A-OvB">
-                    <rect key="frame" x="100" y="163.66666666666666" width="193" height="50"/>
+                    <rect key="frame" x="100" y="213.66666666666666" width="193" height="49.999999999999972"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="2MV-X4-o7h"/>
                     </constraints>
@@ -38,17 +71,21 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="VLh-4u-hum" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="CFx-2s-Y7b"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VLh-4u-hum" secondAttribute="trailing" id="Gty-gQ-nfZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H7l-xe-pU8" secondAttribute="trailing" constant="20" id="OWW-OS-pV1"/>
                 <constraint firstItem="fyr-2A-OvB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="Pzq-11-JLX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fyr-2A-OvB" secondAttribute="trailing" constant="100" id="TQu-yJ-gzc"/>
                 <constraint firstItem="H7l-xe-pU8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="adp-K7-9G2"/>
+                <constraint firstItem="VLh-4u-hum" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="h00-aR-Cvc"/>
                 <constraint firstItem="fyr-2A-OvB" firstAttribute="top" secondItem="H7l-xe-pU8" secondAttribute="bottom" constant="30" id="jIa-QY-sxj"/>
-                <constraint firstItem="H7l-xe-pU8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="nTu-U8-2VP"/>
+                <constraint firstItem="H7l-xe-pU8" firstAttribute="top" secondItem="VLh-4u-hum" secondAttribute="bottom" constant="60" id="pqU-CX-dRz"/>
             </constraints>
             <point key="canvasLocation" x="121" y="20"/>
         </view>
     </objects>
     <resources>
+        <image name="icon.pop" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

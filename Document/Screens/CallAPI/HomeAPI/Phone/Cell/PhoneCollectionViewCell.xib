@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhoneCollectionViewCell" customModule="Document" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="116"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="116"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G41-7L-GwJ">
+                        <rect key="frame" x="0.0" y="0.0" width="376" height="116"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="G41-7L-GwJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4l0-in-ZbB"/>
+                <constraint firstItem="G41-7L-GwJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="73U-hk-57Y"/>
+                <constraint firstAttribute="trailing" secondItem="G41-7L-GwJ" secondAttribute="trailing" id="bs0-YQ-GBz"/>
+                <constraint firstAttribute="bottom" secondItem="G41-7L-GwJ" secondAttribute="bottom" id="uDj-ef-abl"/>
+            </constraints>
+            <size key="customSize" width="376" height="116"/>
+            <connections>
+                <outlet property="namePhoneLabel" destination="G41-7L-GwJ" id="ect-00-W09"/>
+            </connections>
+            <point key="canvasLocation" x="247.32824427480915" y="43.661971830985919"/>
+        </collectionViewCell>
+    </objects>
+</document>

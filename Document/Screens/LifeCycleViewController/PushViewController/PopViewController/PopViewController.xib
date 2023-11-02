@@ -18,11 +18,44 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKP-yI-Puy">
+                    <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFJ-Ki-ohM">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="2Om-l9-E8k"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="icon.pop"/>
+                            <connections>
+                                <action selector="actionPop:" destination="-1" eventType="touchUpInside" id="Dbi-87-xMv"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life Cycle ViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9O-By-vzB">
+                            <rect key="frame" x="40" y="0.0" width="313" height="40"/>
+                            <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="nFJ-Ki-ohM" firstAttribute="leading" secondItem="UKP-yI-Puy" secondAttribute="leading" id="1OK-jm-vOA"/>
+                        <constraint firstItem="f9O-By-vzB" firstAttribute="top" secondItem="UKP-yI-Puy" secondAttribute="top" id="1aY-0o-JZ6"/>
+                        <constraint firstItem="f9O-By-vzB" firstAttribute="leading" secondItem="nFJ-Ki-ohM" secondAttribute="trailing" id="LrX-6q-mFu"/>
+                        <constraint firstAttribute="bottom" secondItem="nFJ-Ki-ohM" secondAttribute="bottom" id="RRM-Bf-GuJ"/>
+                        <constraint firstItem="nFJ-Ki-ohM" firstAttribute="top" secondItem="UKP-yI-Puy" secondAttribute="top" id="ZBA-Yt-UpF"/>
+                        <constraint firstAttribute="height" constant="40" id="b5R-8P-gbz"/>
+                        <constraint firstAttribute="bottom" secondItem="f9O-By-vzB" secondAttribute="bottom" id="feI-jX-vOX"/>
+                        <constraint firstItem="f9O-By-vzB" firstAttribute="centerX" secondItem="UKP-yI-Puy" secondAttribute="centerX" id="yi9-eP-SKU"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKR-GA-pSx" userLabel="ContainerView">
-                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <rect key="frame" x="0.0" y="99" width="393" height="753"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMk-Pd-VFT">
-                            <rect key="frame" x="46.666666666666657" y="371.66666666666669" width="300" height="50"/>
+                            <rect key="frame" x="46.666666666666657" y="351.66666666666669" width="300" height="50"/>
                             <color key="backgroundColor" red="0.23529411759999999" green="0.36862745099999999" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="g4X-BP-6HS"/>
@@ -53,8 +86,11 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="RKR-GA-pSx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GPa-De-H6U"/>
+                <constraint firstItem="UKP-yI-Puy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4lA-a2-faJ"/>
+                <constraint firstItem="RKR-GA-pSx" firstAttribute="top" secondItem="UKP-yI-Puy" secondAttribute="bottom" id="5Ud-y2-Rc4"/>
+                <constraint firstItem="UKP-yI-Puy" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Mte-ps-koq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RKR-GA-pSx" secondAttribute="trailing" id="QMz-VZ-dny"/>
+                <constraint firstItem="UKP-yI-Puy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RHD-qZ-B8b"/>
                 <constraint firstAttribute="bottom" secondItem="RKR-GA-pSx" secondAttribute="bottom" id="fQq-dj-VDD"/>
                 <constraint firstItem="RKR-GA-pSx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mkU-OW-QR5"/>
             </constraints>
@@ -62,6 +98,7 @@
         </view>
     </objects>
     <resources>
+        <image name="icon.pop" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

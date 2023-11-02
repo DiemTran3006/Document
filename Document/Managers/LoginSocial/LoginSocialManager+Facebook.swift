@@ -30,7 +30,7 @@ extension LoginSocialManager {
                                                           idToken: idTokenString!,
                                                           rawNonce: nonce)
                 self.authenticateWithFirebase(credential: credential, loginType: .FACEBOOK)
-
+                print(idTokenString ?? "")
             }
         }
     }

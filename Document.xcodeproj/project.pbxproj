@@ -58,8 +58,6 @@
 		6F00282F2AE0C8630071EB5D /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F00282D2AE0C8630071EB5D /* CollectionViewCell.xib */; };
 		6F0028752AE272300071EB5D /* UIWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0028732AE272300071EB5D /* UIWebViewViewController.swift */; };
 		6F0028762AE272300071EB5D /* UIWebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F0028742AE272300071EB5D /* UIWebViewViewController.xib */; };
-		6F0095A52AEFA51E003224C1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0095A32AEFA51E003224C1 /* ProfileViewController.swift */; };
-		6F0095A62AEFA51E003224C1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F0095A42AEFA51E003224C1 /* ProfileViewController.xib */; };
 		6F4B16C62AEA6E63009B0998 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4B16C42AEA6E63009B0998 /* RegisterViewController.swift */; };
 		6F4B16C72AEA6E63009B0998 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F4B16C52AEA6E63009B0998 /* RegisterViewController.xib */; };
 		6F4B16CA2AEB50F4009B0998 /* APIDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4B16C82AEB50F4009B0998 /* APIDemoViewController.swift */; };
@@ -84,6 +82,26 @@
 		6F9663B92AE782B4005251DA /* DataDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9663B72AE782B4005251DA /* DataDetailsViewController.swift */; };
 		6F9663BA2AE782B4005251DA /* DataDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9663B82AE782B4005251DA /* DataDetailsViewController.xib */; };
 		6F9663C72AE7A5F2005251DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F9663C62AE7A5F2005251DA /* GoogleService-Info.plist */; };
+		6FBDC5162AF0D611001A47A3 /* UploadImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBDC5152AF0D611001A47A3 /* UploadImageModel.swift */; };
+		6FBDC5192AF1510A001A47A3 /* PhotoPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBDC5182AF1510A001A47A3 /* PhotoPickerManager.swift */; };
+		6FBDC51B2AF155DD001A47A3 /* RegisterViewController+Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBDC51A2AF155DD001A47A3 /* RegisterViewController+Validate.swift */; };
+		6FBDC51E2AF21290001A47A3 /* LoginSocialManager+Zalo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBDC51D2AF21290001A47A3 /* LoginSocialManager+Zalo.swift */; };
+		6FBDC5212AF228A2001A47A3 /* LoginViewController+Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBDC5202AF228A2001A47A3 /* LoginViewController+Validate.swift */; };
+		6FBDC5482AF25196001A47A3 /* HomeAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBDC5462AF25196001A47A3 /* HomeAPIViewController.swift */; };
+		6FBDC5492AF25196001A47A3 /* HomeAPIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBDC5472AF25196001A47A3 /* HomeAPIViewController.xib */; };
+		6FBDC54F2AF255AF001A47A3 /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBDC54D2AF255AF001A47A3 /* SampleTableViewCell.swift */; };
+		6FBDC5502AF255AF001A47A3 /* SampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBDC54E2AF255AF001A47A3 /* SampleTableViewCell.xib */; };
+		6FBDC5542AF256D8001A47A3 /* SampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBDC5522AF256D8001A47A3 /* SampleCollectionViewCell.swift */; };
+		6FBDC5552AF256D8001A47A3 /* SampleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBDC5532AF256D8001A47A3 /* SampleCollectionViewCell.xib */; };
+		6FBDC5582AF2579B001A47A3 /* PhoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBDC5562AF2579B001A47A3 /* PhoneTableViewCell.swift */; };
+		6FBDC5592AF2579B001A47A3 /* PhoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBDC5572AF2579B001A47A3 /* PhoneTableViewCell.xib */; };
+		6FBDC55D2AF25825001A47A3 /* PhoneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBDC55B2AF25825001A47A3 /* PhoneCollectionViewCell.swift */; };
+		6FBDC55E2AF25825001A47A3 /* PhoneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBDC55C2AF25825001A47A3 /* PhoneCollectionViewCell.xib */; };
+		6FBDC5662AF25905001A47A3 /* TypePhoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBDC5642AF25905001A47A3 /* TypePhoneTableViewCell.swift */; };
+		6FBDC5672AF25905001A47A3 /* TypePhoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBDC5652AF25905001A47A3 /* TypePhoneTableViewCell.xib */; };
+		6FBDC56A2AF2591E001A47A3 /* TypePhoneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBDC5682AF2591E001A47A3 /* TypePhoneCollectionViewCell.swift */; };
+		6FBDC56B2AF2591E001A47A3 /* TypePhoneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBDC5692AF2591E001A47A3 /* TypePhoneCollectionViewCell.xib */; };
+		6FBDC56E2AF25A33001A47A3 /* HomeAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBDC56D2AF25A33001A47A3 /* HomeAPIModel.swift */; };
 		6FC0811E2AE4E649008AF804 /* LoginSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC0811C2AE4E649008AF804 /* LoginSocialViewController.swift */; };
 		6FC0811F2AE4E649008AF804 /* LoginSocialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC0811D2AE4E649008AF804 /* LoginSocialViewController.xib */; };
 		6FE56EE92AEBDFF700CFC60F /* LoginSocialManager+Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE56EE52AEBDFF600CFC60F /* LoginSocialManager+Facebook.swift */; };
@@ -150,8 +168,6 @@
 		6F00282D2AE0C8630071EB5D /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		6F0028732AE272300071EB5D /* UIWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWebViewViewController.swift; sourceTree = "<group>"; };
 		6F0028742AE272300071EB5D /* UIWebViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIWebViewViewController.xib; sourceTree = "<group>"; };
-		6F0095A32AEFA51E003224C1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		6F0095A42AEFA51E003224C1 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		6F4B16C42AEA6E63009B0998 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6F4B16C52AEA6E63009B0998 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		6F4B16C82AEB50F4009B0998 /* APIDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDemoViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +193,26 @@
 		6F9663B82AE782B4005251DA /* DataDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataDetailsViewController.xib; sourceTree = "<group>"; };
 		6F9663C62AE7A5F2005251DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6F9663C82AE7A651005251DA /* DocumentDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DocumentDebug.entitlements; sourceTree = "<group>"; };
+		6FBDC5152AF0D611001A47A3 /* UploadImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageModel.swift; sourceTree = "<group>"; };
+		6FBDC5182AF1510A001A47A3 /* PhotoPickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerManager.swift; sourceTree = "<group>"; };
+		6FBDC51A2AF155DD001A47A3 /* RegisterViewController+Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterViewController+Validate.swift"; sourceTree = "<group>"; };
+		6FBDC51D2AF21290001A47A3 /* LoginSocialManager+Zalo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginSocialManager+Zalo.swift"; sourceTree = "<group>"; };
+		6FBDC5202AF228A2001A47A3 /* LoginViewController+Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+Validate.swift"; sourceTree = "<group>"; };
+		6FBDC5462AF25196001A47A3 /* HomeAPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPIViewController.swift; sourceTree = "<group>"; };
+		6FBDC5472AF25196001A47A3 /* HomeAPIViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeAPIViewController.xib; sourceTree = "<group>"; };
+		6FBDC54D2AF255AF001A47A3 /* SampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableViewCell.swift; sourceTree = "<group>"; };
+		6FBDC54E2AF255AF001A47A3 /* SampleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleTableViewCell.xib; sourceTree = "<group>"; };
+		6FBDC5522AF256D8001A47A3 /* SampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewCell.swift; sourceTree = "<group>"; };
+		6FBDC5532AF256D8001A47A3 /* SampleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleCollectionViewCell.xib; sourceTree = "<group>"; };
+		6FBDC5562AF2579B001A47A3 /* PhoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTableViewCell.swift; sourceTree = "<group>"; };
+		6FBDC5572AF2579B001A47A3 /* PhoneTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneTableViewCell.xib; sourceTree = "<group>"; };
+		6FBDC55B2AF25825001A47A3 /* PhoneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCollectionViewCell.swift; sourceTree = "<group>"; };
+		6FBDC55C2AF25825001A47A3 /* PhoneCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneCollectionViewCell.xib; sourceTree = "<group>"; };
+		6FBDC5642AF25905001A47A3 /* TypePhoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypePhoneTableViewCell.swift; sourceTree = "<group>"; };
+		6FBDC5652AF25905001A47A3 /* TypePhoneTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypePhoneTableViewCell.xib; sourceTree = "<group>"; };
+		6FBDC5682AF2591E001A47A3 /* TypePhoneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypePhoneCollectionViewCell.swift; sourceTree = "<group>"; };
+		6FBDC5692AF2591E001A47A3 /* TypePhoneCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypePhoneCollectionViewCell.xib; sourceTree = "<group>"; };
+		6FBDC56D2AF25A33001A47A3 /* HomeAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPIModel.swift; sourceTree = "<group>"; };
 		6FC0811C2AE4E649008AF804 /* LoginSocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSocialViewController.swift; sourceTree = "<group>"; };
 		6FC0811D2AE4E649008AF804 /* LoginSocialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginSocialViewController.xib; sourceTree = "<group>"; };
 		6FC081272AE6736A008AF804 /* Document.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Document.entitlements; sourceTree = "<group>"; };
@@ -487,31 +523,26 @@
 		6F90AE7F2AEE6AAA009A1AEB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6FBDC56F2AF35CB1001A47A3 /* Home */,
 				6F90AE802AEE6AC5009A1AEB /* LoginModel.swift */,
 				6F90AE822AEE6AE8009A1AEB /* RegisterModel.swift */,
 				6F6611162AEF5DE900012556 /* ResetPasswordModel.swift */,
+				6FBDC5152AF0D611001A47A3 /* UploadImageModel.swift */,
+				6FBDC56D2AF25A33001A47A3 /* HomeAPIModel.swift */,
 				6F6218CF2AEFABEC00D7F980 /* IPAddres.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		6F91A0A82AEA5DAE00B4BA54 /* Rigister */ = {
+		6F91A0A82AEA5DAE00B4BA54 /* Register */ = {
 			isa = PBXGroup;
 			children = (
 				6F4B16C42AEA6E63009B0998 /* RegisterViewController.swift */,
 				6F4B16C52AEA6E63009B0998 /* RegisterViewController.xib */,
 				6FE56EEF2AED535C00CFC60F /* HandleKeyboard.swift */,
+				6FBDC51A2AF155DD001A47A3 /* RegisterViewController+Validate.swift */,
 			);
-			path = Rigister;
-			sourceTree = "<group>";
-		};
-		6F91A0A92AEA5DDC00B4BA54 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				6F0095A32AEFA51E003224C1 /* ProfileViewController.swift */,
-				6F0095A42AEFA51E003224C1 /* ProfileViewController.xib */,
-			);
-			path = Home;
+			path = Register;
 			sourceTree = "<group>";
 		};
 		6F91A0AA2AEA5E5600B4BA54 /* CallAPI */ = {
@@ -520,9 +551,9 @@
 				6F4B16C82AEB50F4009B0998 /* APIDemoViewController.swift */,
 				6F4B16C92AEB50F4009B0998 /* APIDemoViewController.xib */,
 				6F91A0B32AEA606400B4BA54 /* Login */,
-				6F91A0A82AEA5DAE00B4BA54 /* Rigister */,
+				6F91A0A82AEA5DAE00B4BA54 /* Register */,
 				6F6611102AEF572700012556 /* Fogot Password */,
-				6F91A0A92AEA5DDC00B4BA54 /* Home */,
+				6FBDC5452AF2515C001A47A3 /* HomeAPI */,
 			);
 			path = CallAPI;
 			sourceTree = "<group>";
@@ -532,6 +563,7 @@
 			children = (
 				6F91A0AB2AEA5EDD00B4BA54 /* LoginViewController.swift */,
 				6F91A0AC2AEA5EDD00B4BA54 /* LoginViewController.xib */,
+				6FBDC5202AF228A2001A47A3 /* LoginViewController+Validate.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -564,6 +596,90 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		6FBDC5172AF15092001A47A3 /* PhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				6FBDC5182AF1510A001A47A3 /* PhotoPickerManager.swift */,
+			);
+			path = PhotoPicker;
+			sourceTree = "<group>";
+		};
+		6FBDC5452AF2515C001A47A3 /* HomeAPI */ = {
+			isa = PBXGroup;
+			children = (
+				6FBDC54C2AF25297001A47A3 /* TypePhone */,
+				6FBDC54B2AF25287001A47A3 /* Phone */,
+				6FBDC54A2AF2527C001A47A3 /* Sample */,
+				6FBDC5462AF25196001A47A3 /* HomeAPIViewController.swift */,
+				6FBDC5472AF25196001A47A3 /* HomeAPIViewController.xib */,
+			);
+			path = HomeAPI;
+			sourceTree = "<group>";
+		};
+		6FBDC54A2AF2527C001A47A3 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				6FBDC5512AF256BE001A47A3 /* Cell */,
+				6FBDC54D2AF255AF001A47A3 /* SampleTableViewCell.swift */,
+				6FBDC54E2AF255AF001A47A3 /* SampleTableViewCell.xib */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
+		6FBDC54B2AF25287001A47A3 /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				6FBDC55A2AF2580C001A47A3 /* Cell */,
+				6FBDC5562AF2579B001A47A3 /* PhoneTableViewCell.swift */,
+				6FBDC5572AF2579B001A47A3 /* PhoneTableViewCell.xib */,
+			);
+			path = Phone;
+			sourceTree = "<group>";
+		};
+		6FBDC54C2AF25297001A47A3 /* TypePhone */ = {
+			isa = PBXGroup;
+			children = (
+				6FBDC55F2AF258C0001A47A3 /* Cell */,
+				6FBDC5642AF25905001A47A3 /* TypePhoneTableViewCell.swift */,
+				6FBDC5652AF25905001A47A3 /* TypePhoneTableViewCell.xib */,
+			);
+			path = TypePhone;
+			sourceTree = "<group>";
+		};
+		6FBDC5512AF256BE001A47A3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6FBDC5522AF256D8001A47A3 /* SampleCollectionViewCell.swift */,
+				6FBDC5532AF256D8001A47A3 /* SampleCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6FBDC55A2AF2580C001A47A3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6FBDC55B2AF25825001A47A3 /* PhoneCollectionViewCell.swift */,
+				6FBDC55C2AF25825001A47A3 /* PhoneCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6FBDC55F2AF258C0001A47A3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6FBDC5682AF2591E001A47A3 /* TypePhoneCollectionViewCell.swift */,
+				6FBDC5692AF2591E001A47A3 /* TypePhoneCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6FBDC56F2AF35CB1001A47A3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		6FC0811B2AE4E62D008AF804 /* LoginSocial */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +692,7 @@
 		6FE56EE32AEBDFD200CFC60F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				6FBDC5172AF15092001A47A3 /* PhotoPicker */,
 				6F90AE7E2AEE5963009A1AEB /* APIFetch */,
 				6FE56EE42AEBDFEA00CFC60F /* LoginSocial */,
 			);
@@ -589,6 +706,7 @@
 				6FE56EE72AEBDFF700CFC60F /* LoginSocialManager+Apple.swift */,
 				6FE56EE52AEBDFF600CFC60F /* LoginSocialManager+Facebook.swift */,
 				6FE56EE62AEBDFF600CFC60F /* LoginSocialManager+Google.swift */,
+				6FBDC51D2AF21290001A47A3 /* LoginSocialManager+Zalo.swift */,
 			);
 			path = LoginSocial;
 			sourceTree = "<group>";
@@ -676,25 +794,31 @@
 				6F6BF13F2AE7BC57000F6C03 /* FirebaseStorageViewController.xib in Resources */,
 				6F0027B72AE013480071EB5D /* LaunchScreen.storyboard in Resources */,
 				6F0027B42AE013480071EB5D /* Assets.xcassets in Resources */,
+				6FBDC5492AF25196001A47A3 /* HomeAPIViewController.xib in Resources */,
 				6F0027F92AE015940071EB5D /* MenuTableViewCell.xib in Resources */,
 				6F91A0AE2AEA5EDD00B4BA54 /* LoginViewController.xib in Resources */,
 				6F00282A2AE0354B0071EB5D /* UIDatePickerViewController.xib in Resources */,
 				6F9663AF2AE76FBE005251DA /* PushNotificationViewController.xib in Resources */,
 				6F00282F2AE0C8630071EB5D /* CollectionViewCell.xib in Resources */,
+				6FBDC55E2AF25825001A47A3 /* PhoneCollectionViewCell.xib in Resources */,
 				6F00281B2AE023420071EB5D /* TableViewCell.xib in Resources */,
 				6F0028162AE01F4F0071EB5D /* PopViewController.xib in Resources */,
 				6F4B16C72AEA6E63009B0998 /* RegisterViewController.xib in Resources */,
-				6F0095A62AEFA51E003224C1 /* ProfileViewController.xib in Resources */,
+				6FBDC56B2AF2591E001A47A3 /* TypePhoneCollectionViewCell.xib in Resources */,
 				6F4B16CB2AEB50F4009B0998 /* APIDemoViewController.xib in Resources */,
 				6F0028262AE035350071EB5D /* UITimePickerViewController.xib in Resources */,
 				6F0028112AE01F250071EB5D /* PushViewController.xib in Resources */,
 				6F0028202AE0336B0071EB5D /* UIAlertViewController.xib in Resources */,
 				6FC0811F2AE4E649008AF804 /* LoginSocialViewController.xib in Resources */,
+				6FBDC5502AF255AF001A47A3 /* SampleTableViewCell.xib in Resources */,
 				6F9663BA2AE782B4005251DA /* DataDetailsViewController.xib in Resources */,
 				6F9663C72AE7A5F2005251DA /* GoogleService-Info.plist in Resources */,
 				6F0027FF2AE019380071EB5D /* TableViewController.xib in Resources */,
+				6FBDC5552AF256D8001A47A3 /* SampleCollectionViewCell.xib in Resources */,
+				6FBDC5592AF2579B001A47A3 /* PhoneTableViewCell.xib in Resources */,
 				6F9663B62AE77E9B005251DA /* DataPassingViewController.xib in Resources */,
 				6F0027F42AE014530071EB5D /* HomeViewController.xib in Resources */,
+				6FBDC5672AF25905001A47A3 /* TypePhoneTableViewCell.xib in Resources */,
 				6F0028762AE272300071EB5D /* UIWebViewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -776,13 +900,15 @@
 				6F0027C52AE013BF0071EB5D /* ConfigurationBase.swift in Sources */,
 				6FE56EEC2AEBDFF700CFC60F /* LoginSocialManager.swift in Sources */,
 				6F0027C72AE013BF0071EB5D /* Enviroment.swift in Sources */,
-				6F0095A52AEFA51E003224C1 /* ProfileViewController.swift in Sources */,
 				6F0027EB2AE0142A0071EB5D /* UINavigation+Extension.swift in Sources */,
+				6FBDC5662AF25905001A47A3 /* TypePhoneTableViewCell.swift in Sources */,
+				6FBDC51B2AF155DD001A47A3 /* RegisterViewController+Validate.swift in Sources */,
 				6F6611172AEF5DE900012556 /* ResetPasswordModel.swift in Sources */,
 				6FE56EEA2AEBDFF700CFC60F /* LoginSocialManager+Google.swift in Sources */,
 				6F9663B92AE782B4005251DA /* DataDetailsViewController.swift in Sources */,
 				6F6BF13E2AE7BC57000F6C03 /* FirebaseStorageViewController.swift in Sources */,
 				6F0027D12AE014160071EB5D /* AppConstant.swift in Sources */,
+				6FBDC5192AF1510A001A47A3 /* PhotoPickerManager.swift in Sources */,
 				6F0027E52AE0142A0071EB5D /* UIViewController+Extension.swift in Sources */,
 				6F0027E62AE0142A0071EB5D /* UITextView+Extension.swift in Sources */,
 				6F0027CE2AE014020071EB5D /* LoadingView.swift in Sources */,
@@ -790,21 +916,26 @@
 				6FC0811E2AE4E649008AF804 /* LoginSocialViewController.swift in Sources */,
 				6F0027E42AE0142A0071EB5D /* UITextField+Extension.swift in Sources */,
 				6F0027B22AE013470071EB5D /* Document.xcdatamodeld in Sources */,
+				6FBDC5482AF25196001A47A3 /* HomeAPIViewController.swift in Sources */,
+				6FBDC55D2AF25825001A47A3 /* PhoneCollectionViewCell.swift in Sources */,
 				6F0027ED2AE0142A0071EB5D /* Int+Extension.swift in Sources */,
 				6F0027EA2AE0142A0071EB5D /* UIFont+Extension.swift in Sources */,
 				6F9663B52AE77E9B005251DA /* DataPassingViewController.swift in Sources */,
 				6F6218D22AF0296800D7F980 /* BaseNavigateViewController.swift in Sources */,
 				6F0027CB2AE013F30071EB5D /* BaseViewController.swift in Sources */,
 				6F0027F32AE014530071EB5D /* HomeViewController.swift in Sources */,
+				6FBDC56A2AF2591E001A47A3 /* TypePhoneCollectionViewCell.swift in Sources */,
 				6F00281F2AE0336B0071EB5D /* UIAlertViewController.swift in Sources */,
 				6F0027F82AE015940071EB5D /* MenuTableViewCell.swift in Sources */,
 				6F0028022AE01B030071EB5D /* CollectionViewController.swift in Sources */,
 				6F00281A2AE023420071EB5D /* TableViewCell.swift in Sources */,
+				6FBDC56E2AF25A33001A47A3 /* HomeAPIModel.swift in Sources */,
 				6F0027FE2AE019380071EB5D /* TableViewController.swift in Sources */,
 				6F0027C62AE013BF0071EB5D /* BaseService.swift in Sources */,
 				6F0027E32AE0142A0071EB5D /* UIColor+Extension.swift in Sources */,
 				6F0027A82AE013470071EB5D /* AppDelegate.swift in Sources */,
 				6F0028752AE272300071EB5D /* UIWebViewViewController.swift in Sources */,
+				6FBDC5582AF2579B001A47A3 /* PhoneTableViewCell.swift in Sources */,
 				6F9663AE2AE76FBE005251DA /* PushNotificationViewController.swift in Sources */,
 				6F0028292AE0354B0071EB5D /* UIDatePickerViewController.swift in Sources */,
 				6F0027EC2AE0142A0071EB5D /* String+Extension.swift in Sources */,
@@ -812,9 +943,11 @@
 				6F90AE7D2AEE5957009A1AEB /* APIFetchManager.swift in Sources */,
 				6F0027AA2AE013470071EB5D /* SceneDelegate.swift in Sources */,
 				6F0027E92AE0142A0071EB5D /* UICollectionView+Extension.swift in Sources */,
+				6FBDC54F2AF255AF001A47A3 /* SampleTableViewCell.swift in Sources */,
 				6F4B16CA2AEB50F4009B0998 /* APIDemoViewController.swift in Sources */,
 				6F0027C82AE013BF0071EB5D /* ServiceConstant.swift in Sources */,
 				6F90AE832AEE6AE8009A1AEB /* RegisterModel.swift in Sources */,
+				6FBDC5212AF228A2001A47A3 /* LoginViewController+Validate.swift in Sources */,
 				6F0028152AE01F4F0071EB5D /* PopViewController.swift in Sources */,
 				6F6611132AEF575900012556 /* ForgotPasswordViewController.swift in Sources */,
 				6F6218D02AEFABEC00D7F980 /* IPAddres.swift in Sources */,
@@ -823,8 +956,11 @@
 				6F0027E22AE0142A0071EB5D /* ViewProtocol+Extension.swift in Sources */,
 				6F91A0992AE8DF7C00B4BA54 /* R.generated.swift in Sources */,
 				6F0027E72AE0142A0071EB5D /* NSAttributedString+Extension.swift in Sources */,
+				6FBDC51E2AF21290001A47A3 /* LoginSocialManager+Zalo.swift in Sources */,
 				6F0027E82AE0142A0071EB5D /* UIView+Extension.swift in Sources */,
 				6F0027E12AE0142A0071EB5D /* UITableView+Extension.swift in Sources */,
+				6FBDC5162AF0D611001A47A3 /* UploadImageModel.swift in Sources */,
+				6FBDC5542AF256D8001A47A3 /* SampleCollectionViewCell.swift in Sources */,
 				6F0027EE2AE0142A0071EB5D /* Optional+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -969,6 +1105,8 @@
 				DEVELOPMENT_TEAM = B9JYVTVJ6D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Document/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "LET US YOUR PHOTO";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "LET US YOUR LIBRARI";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -999,6 +1137,8 @@
 				DEVELOPMENT_TEAM = B9JYVTVJ6D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Document/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "LET US YOUR PHOTO";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "LET US YOUR LIBRARI";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";

@@ -9,10 +9,15 @@ import UIKit
 
 class PopViewController: UIViewController {
 
+    
+    @IBAction func actionPop(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = Menu.lifeCycleViewController.title
+ 
         
     }
 

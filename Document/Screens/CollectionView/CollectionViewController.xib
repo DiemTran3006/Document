@@ -19,8 +19,41 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zjs-Da-xV8">
+                    <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYK-2v-na5">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="hcV-TZ-OH8"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="icon.pop"/>
+                            <connections>
+                                <action selector="actionPopMenu:" destination="-1" eventType="touchUpInside" id="RfY-Az-lzJ"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dH2-lc-GWh">
+                            <rect key="frame" x="40" y="0.0" width="313" height="40"/>
+                            <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="9gd-pH-13J"/>
+                        <constraint firstItem="dH2-lc-GWh" firstAttribute="top" secondItem="Zjs-Da-xV8" secondAttribute="top" id="AqA-PO-PyJ"/>
+                        <constraint firstAttribute="bottom" secondItem="dH2-lc-GWh" secondAttribute="bottom" id="EPR-K1-3Wd"/>
+                        <constraint firstItem="dH2-lc-GWh" firstAttribute="centerX" secondItem="Zjs-Da-xV8" secondAttribute="centerX" id="F8m-Dz-hcU"/>
+                        <constraint firstItem="SYK-2v-na5" firstAttribute="top" secondItem="Zjs-Da-xV8" secondAttribute="top" id="VOc-6q-RxA"/>
+                        <constraint firstItem="SYK-2v-na5" firstAttribute="leading" secondItem="Zjs-Da-xV8" secondAttribute="leading" id="mIy-OB-iei"/>
+                        <constraint firstAttribute="bottom" secondItem="SYK-2v-na5" secondAttribute="bottom" id="xHH-Ok-4Qu"/>
+                        <constraint firstItem="dH2-lc-GWh" firstAttribute="leading" secondItem="SYK-2v-na5" secondAttribute="trailing" id="yne-PK-zK5"/>
+                    </constraints>
+                </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IFx-4H-ibu">
-                    <rect key="frame" x="10" y="74" width="373" height="744"/>
+                    <rect key="frame" x="10" y="99" width="373" height="719"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ULz-jX-9kl">
                         <size key="itemSize" width="128" height="128"/>
@@ -34,14 +67,18 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IFx-4H-ibu" secondAttribute="bottom" id="1lf-cJ-YOY"/>
-                <constraint firstItem="IFx-4H-ibu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="TlN-jQ-o9X"/>
+                <constraint firstItem="IFx-4H-ibu" firstAttribute="top" secondItem="Zjs-Da-xV8" secondAttribute="bottom" id="2Mc-fI-Jgz"/>
+                <constraint firstItem="Zjs-Da-xV8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GSt-4c-0dN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Zjs-Da-xV8" secondAttribute="trailing" id="WoA-QG-Urg"/>
                 <constraint firstItem="IFx-4H-ibu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="d6s-O5-6Ox"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IFx-4H-ibu" secondAttribute="trailing" constant="10" id="egm-ac-8r6"/>
+                <constraint firstItem="Zjs-Da-xV8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="f06-s2-MIz"/>
             </constraints>
             <point key="canvasLocation" x="48" y="21"/>
         </view>
     </objects>
     <resources>
+        <image name="icon.pop" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

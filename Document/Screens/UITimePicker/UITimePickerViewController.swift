@@ -11,10 +11,13 @@ class UITimePickerViewController: UIViewController {
     
     @IBOutlet weak var timepickerTextfield: UITextField!
     
+    @IBAction func actionPopMenu(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = Menu.UITimePicker.title
         creaateTimePicker()
     }
     

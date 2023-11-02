@@ -12,7 +12,10 @@ class UIAlertViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = Menu.UIAlert.title
+    }
+    
+    @IBAction func actionPopMenu(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func oneButton(_ sender: Any) {

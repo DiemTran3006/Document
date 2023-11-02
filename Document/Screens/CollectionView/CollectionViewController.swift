@@ -120,19 +120,18 @@ class CollectionViewController: UIViewController {
     ]
     @IBOutlet weak var myCollectionView: UICollectionView!
     
-    private let flowLayout = UICollectionViewFlowLayout()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = Menu.collectionView.title
         ConfigCollectionView()
+    }
+    
+    @IBAction func actionPopMenu(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func ConfigCollectionView() {
         
-//        flowLayout.minimumLineSpacing = 20
-//        flowLayout.minimumInteritemSpacing = 0
-//        myCollectionView.collectionViewLayout = flowLayout
         myCollectionView.dataSource = self
         myCollectionView.delegate = self
         myCollectionView.register(cellType: CollectionViewCell.self )

@@ -20,12 +20,13 @@ class LoginSocialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = Menu.loginSocial.title
         loginSocialManager.delegate = self
         setUser(user: .init(name: nil, email: nil, photoUrl: nil, loginType: .APPLE))
     }
     
+    @IBAction func actionPopMenu(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func loginFacebookAction(_ sender: Any) {
         loginSocialManager.startSignInWithFacebookFlow(view: self)
     }

@@ -18,6 +18,39 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W29-BA-unF">
+                    <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ci8-Se-0Dd">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="1FI-LE-Wba"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="icon.pop"/>
+                            <connections>
+                                <action selector="actionPopMenu:" destination="-1" eventType="touchUpInside" id="mVT-u1-Ze8"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PushNotification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOb-X2-iHt">
+                            <rect key="frame" x="40" y="0.0" width="313" height="40"/>
+                            <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ci8-Se-0Dd" firstAttribute="leading" secondItem="W29-BA-unF" secondAttribute="leading" id="57u-Nt-ABh"/>
+                        <constraint firstItem="OOb-X2-iHt" firstAttribute="centerX" secondItem="W29-BA-unF" secondAttribute="centerX" id="6dR-bJ-Nnt"/>
+                        <constraint firstItem="ci8-Se-0Dd" firstAttribute="top" secondItem="W29-BA-unF" secondAttribute="top" id="CTH-b4-2Ok"/>
+                        <constraint firstItem="OOb-X2-iHt" firstAttribute="leading" secondItem="ci8-Se-0Dd" secondAttribute="trailing" id="MvP-RC-r93"/>
+                        <constraint firstAttribute="bottom" secondItem="OOb-X2-iHt" secondAttribute="bottom" id="W1m-io-GQY"/>
+                        <constraint firstAttribute="height" constant="40" id="Z8L-R9-bEA"/>
+                        <constraint firstAttribute="bottom" secondItem="ci8-Se-0Dd" secondAttribute="bottom" id="a8d-cG-jpw"/>
+                        <constraint firstItem="OOb-X2-iHt" firstAttribute="top" secondItem="W29-BA-unF" secondAttribute="top" id="hYb-Ys-Ec6"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8d-fm-eIe">
                     <rect key="frame" x="24" y="413.66666666666669" width="345" height="50"/>
                     <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
@@ -42,15 +75,19 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemTealColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="W29-BA-unF" secondAttribute="trailing" id="4u5-Ik-QcQ"/>
                 <constraint firstItem="H8d-fm-eIe" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="KWZ-BR-CN1"/>
                 <constraint firstItem="H8d-fm-eIe" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="ZTK-6M-aZW"/>
+                <constraint firstItem="W29-BA-unF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aFa-P6-2BF"/>
                 <constraint firstItem="H8d-fm-eIe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="dOh-GL-hfm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H8d-fm-eIe" secondAttribute="trailing" constant="24" id="gfA-bn-Wns"/>
+                <constraint firstItem="W29-BA-unF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kjT-ZI-Hts"/>
             </constraints>
             <point key="canvasLocation" x="98" y="20"/>
         </view>
     </objects>
     <resources>
+        <image name="icon.pop" width="24" height="24"/>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

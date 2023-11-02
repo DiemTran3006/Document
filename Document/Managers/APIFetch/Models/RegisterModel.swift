@@ -22,3 +22,5 @@ struct RegisterModel: Codable {
 struct Data1: Codable {
     let email: String
 }
+
+

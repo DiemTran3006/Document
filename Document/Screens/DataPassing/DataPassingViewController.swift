@@ -22,7 +22,6 @@ class DataPassingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = Menu.dataPassing.title
         receiveDataTextfield.addPadding(.left(15))
         passwordTextfield.addPadding(.left(15))
         emaiTextfield.addPadding(.left(15))
@@ -30,6 +29,11 @@ class DataPassingViewController: UIViewController {
         hideKeyboardWhenTappedAround()
         checkValidate()
     }
+    
+    @IBAction func actionPopMenu(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func changedEmailTextfield(_ sender: Any) {
         checkValidate()
     }

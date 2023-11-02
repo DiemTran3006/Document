@@ -11,6 +11,7 @@ enum LoginSocialType {
     case FACEBOOK
     case GOOGLE
     case APPLE
+    case ZALO
 }
 
 struct LoginSocialResponse {
@@ -28,8 +29,10 @@ protocol LoginSocialProtocol: AnyObject {
 class LoginSocialManager: NSObject {
     static var shared: LoginSocialManager = LoginSocialManager()
     var currentNonce: String?
+    var codeChallenage = ""
+    var codeVerifier = ""
     weak var delegate: LoginSocialProtocol?
-
+    
     init(delegate: LoginSocialProtocol? = nil) {
         self.delegate = delegate
     }

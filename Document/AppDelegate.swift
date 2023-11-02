@@ -12,6 +12,7 @@ import FBSDKCoreKit
 import Firebase
 import FirebaseMessaging
 import UserNotifications
+import ZaloSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,7 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ApplicationDelegate.shared.application(
             application,
             didFinishLaunchingWithOptions: launchOptions )
-        
+//        config Zalo
+        ZaloSDK.sharedInstance().initialize(withAppId: "1654143931117318442")
         registerForPushNotifications()
 
     

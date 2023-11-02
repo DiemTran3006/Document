@@ -911,6 +911,12 @@ PODS:
   - RecaptchaInterop (100.0.0)
   - SnapKit (5.6.0)
   - Toast-Swift (5.0.1)
+  - ZaloSDK (4.1.0120):
+    - ZaloSDK/Core (= 4.1.0120)
+    - ZaloSDK/Main (= 4.1.0120)
+  - ZaloSDK/Core (4.1.0120)
+  - ZaloSDK/Main (4.1.0120):
+    - ZaloSDK/Core
 
 DEPENDENCIES:
   - AlamofireImage (~> 4.1)
@@ -930,6 +936,7 @@ DEPENDENCIES:
   - R.swift
   - SnapKit (~> 5.6.0)
   - Toast-Swift
+  - ZaloSDK
 
 SPEC REPOS:
   trunk:
@@ -972,6 +979,7 @@ SPEC REPOS:
     - RecaptchaInterop
     - SnapKit
     - Toast-Swift
+    - ZaloSDK
 
 SPEC CHECKSUMS:
   abseil: 926fb7a82dc6d2b8e1f2ed7f3a718bce691d1e46
@@ -1013,7 +1021,8 @@ SPEC CHECKSUMS:
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+  ZaloSDK: 233c5cb5247bd6891f4a7d2d9505f6a2b9aa38c6
 
-PODFILE CHECKSUM: 3c68dd3d99bd01b5b826e4afeb3dae4ead5ebf41
+PODFILE CHECKSUM: bcfe9c6c4b1e1fff15f30c0a4c322b377b2217c5
 
 COCOAPODS: 1.12.1

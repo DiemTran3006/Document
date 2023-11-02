@@ -11,7 +11,6 @@ class PushNotificationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = Menu.pushNotification.title
     }
     
 //    PushNotication bằnh Local
@@ -31,4 +30,7 @@ class PushNotificationViewController: UIViewController {
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
+    @IBAction func actionPopMenu(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
